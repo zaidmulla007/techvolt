@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Power Electrical - Industrial & Oil Gas Electrical Solutions UAE",
-  description: "Specialist supplier of industrial and Oil & Gas electrical and lighting solutions for demanding commercial, industrial, and hazardous environments. ATEX/IECEx certified products.",
-  keywords: ["industrial electrical", "oil gas lighting", "explosion proof", "ATEX", "IECEx", "hazardous area", "UAE", "Sharjah"],
+  description: "Specialist supplier of industrial and Oil & Gas electrical and lighting solutions for demanding commercial, industrial, and hazardous environments. ATEX/IECEx/ICV certified products.",
+  keywords: ["industrial electrical", "oil gas lighting", "explosion proof", "ATEX", "IECEx", "ICV", "hazardous area", "UAE", "Sharjah"],
 };
 
 export default function RootLayout({

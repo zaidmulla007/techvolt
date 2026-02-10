@@ -179,7 +179,7 @@ const Hero = () => {
               {[
                 { icon: FaIndustry, label: 'Industries Served', value: '15+', color: 'from-blue-400 to-cyan-400' },
                 { icon: FaBolt, label: 'Products', value: '200+', color: 'from-yellow-400 to-orange-400' },
-                { icon: FaShieldAlt, label: 'Certifications', value: 'ATEX/IECEx', color: 'from-green-400 to-emerald-400' },
+                { icon: FaShieldAlt, label: 'Certifications', value: 'ATEX/IECEx/ICV', color: 'from-green-400 to-emerald-400' },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -289,6 +289,26 @@ const Hero = () => {
                     <div className="text-blue-900 font-bold text-base">IP66/IP67</div>
                   </div>
                   <div className="text-xs text-gray-600 ml-6">Protection</div>
+                </motion.div>
+
+                {/* ICV Certified Card */}
+                <motion.div
+                  className="absolute -left-8 bottom-1/4 bg-gradient-to-br from-white to-orange-50 rounded-2xl p-5 shadow-2xl border border-orange-100"
+                  animate={{
+                    y: [0, 10, 0],
+                    rotate: [-2, 2, -2],
+                  }}
+                  transition={{
+                    duration: 4.5,
+                    repeat: Infinity,
+                    ease: 'easeInOut' as const,
+                  }}
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <FaCheckCircle className="text-orange-500 text-lg" />
+                    <div className="text-blue-900 font-bold text-base">ICV Certified</div>
+                  </div>
+                  <div className="text-xs text-gray-600 ml-6">In-Country Value</div>
                 </motion.div>
 
                 {/* Additional Bottom Card */}

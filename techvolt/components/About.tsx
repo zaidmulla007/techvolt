@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FaCheckCircle, FaAward, FaCog, FaUsers } from 'react-icons/fa';
+import { FaCheckCircle, FaAward, FaCog, FaUsers, FaBrain, FaGlobeAmericas, FaTruck, FaTools, FaHandshake, FaBoxes } from 'react-icons/fa';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -30,6 +30,36 @@ const About = () => {
       icon: FaUsers,
       title: 'After-Sales Support',
       description: 'Field trials, sample testing, local commissioning assistance, spares availability and standardized warranty terms.',
+    },
+    {
+      icon: FaBrain,
+      title: 'Expert Knowledge',
+      description: 'Over years of specializing in industrial / hazardous area products with deep understanding of ATEX/IECEx regulations and zone requirements.',
+    },
+    {
+      icon: FaGlobeAmericas,
+      title: 'Manufacturing Origin',
+      description: 'All products are manufactured in various Countries and available as per the requirement with full quality control and traceability.',
+    },
+    {
+      icon: FaTruck,
+      title: 'Rapid Delivery',
+      description: 'Fast turnaround times without compromising on quality standards or certification requirements. Air and Sea shipment on every month.',
+    },
+    {
+      icon: FaTools,
+      title: 'Custom Solutions',
+      description: 'Bespoke designs manufactured to your exact specifications with full certification support on Electrical and Lighting.',
+    },
+    {
+      icon: FaHandshake,
+      title: 'Personal Service',
+      description: 'Direct access to our technical manufacturer team for your application support and project consultation.',
+    },
+    {
+      icon: FaBoxes,
+      title: 'Wide Range of Products',
+      description: 'Partnering with multiple manufacturers gives us the advantage of offering a wide certified product range.',
     },
   ];
 
@@ -109,6 +139,13 @@ const About = () => {
                   <FaCheckCircle className="text-green-600" />
                   <span className="font-semibold text-green-900">ISO Compliant</span>
                 </motion.div>
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-lg"
+                >
+                  <FaCheckCircle className="text-orange-600" />
+                  <span className="font-semibold text-orange-900">ICV Certified</span>
+                </motion.div>
               </div>
             </motion.div>
 
@@ -158,7 +195,7 @@ const About = () => {
           {/* Features Grid */}
           <motion.div
             variants={containerVariants}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {features.map((feature, index) => (
               <motion.div

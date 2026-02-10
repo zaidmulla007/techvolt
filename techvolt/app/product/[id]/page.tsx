@@ -310,6 +310,7 @@ const productData: any = {
       { name: 'ECAS', image: '3. ECAS.webp' },
       { name: 'EAC', image: '4. EAC.png' },
       { name: 'CCC', image: '5. CCC.png' },
+      { name: 'ICV', image: 'ICV.png' },
     ],
   },
   '4': {
@@ -404,6 +405,7 @@ const productData: any = {
       { name: 'ABS', image: 'ABS-LOGO.jpg' },
       { name: 'CB', image: 'CB.png' },
       { name: 'UL', image: 'UL.jpg' },
+      { name: 'ICV', image: 'ICV.png' },
     ],
   },
   '5': {
@@ -450,6 +452,7 @@ const productData: any = {
       { name: 'EAC Ex', image: '3. EAC Ex.png' },
       { name: 'ABS', image: 'ABS.jpg' },
       { name: 'DNV', image: 'DNV.jpg' },
+      { name: 'ICV', image: 'ICV.png' },
     ],
   },
 };

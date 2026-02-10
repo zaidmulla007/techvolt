@@ -34,7 +34,7 @@ const Products = () => {
       title: 'Ex Oil & Gas Electrical',
       description: 'ATEX/IECEx certified explosion-proof electrical equipment for hazardous areas',
       color: 'from-purple-500 to-purple-700',
-      features: ['ATEX Certified', 'Zone 1 & 2', 'IECEx Approved'],
+      features: ['ATEX Certified', 'Zone 1 & 2', 'IECEx Approved', 'ICV Certified'],
     },
     {
       id: 4,
@@ -50,7 +50,7 @@ const Products = () => {
       title: 'Ex Air Conditions',
       description: 'Explosion-proof air conditioning units for classified hazardous locations',
       color: 'from-green-500 to-green-700',
-      features: ['Climate Control', 'Positive Pressure', 'Ex Certified'],
+      features: ['Climate Control', 'Positive Pressure', 'Ex Certified', 'ICV Certified'],
     },
   ];
 
