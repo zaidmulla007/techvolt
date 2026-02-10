@@ -178,7 +178,7 @@ const Hero = () => {
             >
               {[
                 { icon: FaIndustry, label: 'Industries Served', value: '15+', color: 'from-blue-400 to-cyan-400' },
-                { icon: FaBolt, label: 'Products', value: '500+', color: 'from-yellow-400 to-orange-400' },
+                { icon: FaBolt, label: 'Products', value: '200+', color: 'from-yellow-400 to-orange-400' },
                 { icon: FaShieldAlt, label: 'Certifications', value: 'ATEX/IECEx', color: 'from-green-400 to-emerald-400' },
               ].map((stat, index) => (
                 <motion.div
@@ -305,7 +305,7 @@ const Hero = () => {
                 >
                   <div className="flex items-center gap-2">
                     <FaBolt className="text-yellow-500 text-sm" />
-                    <div className="text-blue-900 font-bold text-sm">500+ Products</div>
+                    <div className="text-blue-900 font-bold text-sm">200+ Products</div>
                   </div>
                 </motion.div>
               </motion.div>

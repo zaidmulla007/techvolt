@@ -84,7 +84,7 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-lg'
+            ? 'bg-white shadow-lg'
             : 'bg-white'
         }`}
       >

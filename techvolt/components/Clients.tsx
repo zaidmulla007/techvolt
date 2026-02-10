@@ -20,6 +20,15 @@ const Clients = () => {
     { name: 'vtti_logo', ext: 'jpeg' },
     { name: 'CMW', ext: 'jpg' },
     { name: 'RTA-min-768x768', ext: 'jpg' },
+    { name: 'Borouge_logo', ext: 'gif' },
+    { name: 'Drydocks-World-logo', ext: 'webp' },
+    { name: 'Emirate-01', ext: 'webp' },
+    { name: 'images (1)', ext: 'png' },
+    { name: 'images (2)', ext: 'png' },
+    { name: 'images (3)', ext: 'png' },
+    { name: 'PDO-Transparent-300x300', ext: 'png' },
+    { name: 'Untitled-2024-10-10T202900.611', ext: 'jpeg' },
+    { name: 'Wdyzs6mx7SogPRFlNWxU4jym0fW3fzGiUZjHCQQ1r70', ext: 'avif' },
   ];
 
   const partners = [
@@ -33,6 +42,9 @@ const Clients = () => {
     { name: 'Cortem', ext: 'png' },
     { name: 'ROSE', ext: 'png' },
     { name: 'Zalux', ext: 'png' },
+    { name: 'BARTEC-only-Logo', ext: 'webp' },
+    { name: 'jct-ls-logo-4c-rz-1', ext: 'webp' },
+    { name: 'Scame', ext: 'webp' },
   ];
 
   return (
@@ -66,7 +78,7 @@ const Clients = () => {
                   whileHover={{ scale: 1.1, y: -5 }}
                   className="flex items-center justify-center p-4 bg-gray-50 rounded-xl hover:bg-white hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="relative w-28 h-20 grayscale hover:grayscale-0 transition-all duration-300">
+                  <div className="relative w-28 h-20 lg:grayscale lg:hover:grayscale-0 transition-all duration-300">
                     <Image
                       src={`/images/customers/${client.name}.${client.ext}`}
                       alt={client.name}
@@ -102,7 +114,7 @@ const Clients = () => {
                   whileHover={{ scale: 1.1, rotate: 2 }}
                   className="flex items-center justify-center p-4 bg-gradient-to-br from-gray-50 to-blue-50 rounded-lg hover:from-white hover:to-cyan-50 hover:shadow-md transition-all duration-300"
                 >
-                  <div className="relative w-24 h-16 grayscale hover:grayscale-0 transition-all duration-300">
+                  <div className="relative w-24 h-16 lg:grayscale lg:hover:grayscale-0 transition-all duration-300">
                     <Image
                       src={`/images/principles/${partner.name}.${partner.ext}`}
                       alt={partner.name}

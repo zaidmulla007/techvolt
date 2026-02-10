@@ -108,19 +108,19 @@ const Products = () => {
           {/* Products Grid */}
           <motion.div
             variants={containerVariants}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
           >
             {productCategories.map((product, index) => (
-              <Link key={index} href={`/product/${product.id}`} className="block">
+              <Link key={index} href={`/product/${product.id}`} className="block w-full max-w-sm">
                 <motion.div
                   variants={cardVariants}
                   whileHover={{ y: -15, scale: 1.03 }}
-                  className="group relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500 cursor-pointer"
+                  className="group relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500 cursor-pointer h-full flex flex-col"
                 >
                   {/* Gradient Header */}
                   <div className={`h-2 bg-gradient-to-r ${product.color}`} />
 
-                <div className="p-8">
+                <div className="p-8 flex flex-col flex-1">
                   {/* Icon */}
                   <div className="relative mb-6">
                     <div className={`w-20 h-20 bg-gradient-to-br ${product.color} rounded-2xl flex items-center justify-center transform group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-lg`}>
@@ -139,7 +139,7 @@ const Products = () => {
                   </p>
 
                   {/* Features */}
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-2 mb-6 mt-auto">
                     {product.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center gap-2">
                         <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${product.color}`} />

@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-black text-white">
+    <footer className="bg-white text-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
@@ -25,7 +25,7 @@ const Footer = () => {
               height={60}
               className="h-14 w-auto mb-4"
             />
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-600 text-sm mb-4">
               Specialist supplier of industrial and Oil & Gas electrical and lighting solutions for demanding environments.
             </p>
             <div className="flex gap-4">
@@ -33,8 +33,8 @@ const Footer = () => {
                 <motion.a
                   key={index}
                   href="#"
-                  whileHover={{ scale: 1.2, color: '#06b6d4' }}
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-smooth"
+                  whileHover={{ scale: 1.2 }}
+                  className="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full flex items-center justify-center hover:from-blue-700 hover:to-cyan-600 transition-smooth"
                 >
                   <Icon className="text-lg" />
                 </motion.a>
@@ -53,7 +53,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {['Home', 'About Us', 'Products', 'Services', 'Blog', 'Contact'].map((item) => (
                 <li key={item}>
-                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-gray-400 hover:text-cyan-400 transition-smooth text-sm">
+                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-gray-600 hover:text-cyan-400 transition-smooth text-sm">
                     {item}
                   </a>
                 </li>
@@ -78,7 +78,7 @@ const Footer = () => {
                 'Ex Air Conditions'
               ].map((item) => (
                 <li key={item}>
-                  <a href="#products" className="text-gray-400 hover:text-cyan-400 transition-smooth text-sm">
+                  <a href="#products" className="text-gray-600 hover:text-cyan-400 transition-smooth text-sm">
                     {item}
                   </a>
                 </li>
@@ -97,19 +97,19 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm">
                 <FaMapMarkerAlt className="text-cyan-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-400">
+                <span className="text-gray-600">
                   Office No. 502, Omran Tower, King Abdul Aziz Road, Al Nud, Al Qasimiya, Sharjah, UAE
                 </span>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <FaPhone className="text-cyan-400" />
-                <a href="tel:+971545764342" className="text-gray-400 hover:text-cyan-400 transition-smooth">
+                <a href="tel:+971545764342" className="text-gray-600 hover:text-cyan-400 transition-smooth">
                   +971 54 576 4342
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <FaEnvelope className="text-cyan-400" />
-                <a href="mailto:info@powerelectricaluae.com" className="text-gray-400 hover:text-cyan-400 transition-smooth">
+                <a href="mailto:info@powerelectricaluae.com" className="text-gray-600 hover:text-cyan-400 transition-smooth">
                   info@powerelectricaluae.com
                 </a>
               </li>
@@ -118,14 +118,14 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-gray-300 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-600 text-sm">
               © {currentYear} Power Electrical Trading LLC. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-smooth">Privacy Policy</a>
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-smooth">Terms of Service</a>
+              <a href="#" className="text-gray-600 hover:text-cyan-400 transition-smooth">Privacy Policy</a>
+              <a href="#" className="text-gray-600 hover:text-cyan-400 transition-smooth">Terms of Service</a>
             </div>
           </div>
         </div>

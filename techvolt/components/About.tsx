@@ -126,14 +126,14 @@ const About = () => {
                   whileHover={{ scale: 1.05, rotate: -2 }}
                   className="bg-gradient-to-br from-cyan-500 to-cyan-700 rounded-2xl p-6 text-white text-center shadow-xl"
                 >
-                  <div className="text-4xl font-bold mb-2">500+</div>
+                  <div className="text-4xl font-bold mb-2">200+</div>
                   <div className="text-xs">Products</div>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: -2 }}
                   className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl p-6 text-white text-center shadow-xl"
                 >
-                  <div className="text-4xl font-bold mb-2">1000+</div>
+                  <div className="text-4xl font-bold mb-2">250+</div>
                   <div className="text-xs">Projects</div>
                 </motion.div>
                 <motion.div
@@ -147,6 +147,14 @@ const About = () => {
             </motion.div>
           </div>
 
+          {/* Why Choose Us Section */}
+          <motion.div variants={itemVariants} className="text-center mb-12">
+            <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Why <span className="text-gradient">Choose Us</span>
+            </h3>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full" />
+          </motion.div>
+
           {/* Features Grid */}
           <motion.div
             variants={containerVariants}
@@ -157,13 +165,13 @@ const About = () => {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
-                className="card-hover bg-white rounded-xl p-6 text-center"
+                className="card-hover bg-white rounded-xl p-6"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center mb-4">
                   <feature.icon className="text-3xl text-blue-600" />
                 </div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h4>
-                <p className="text-sm text-gray-600">{feature.description}</p>
+                <p className="text-sm text-gray-600 text-left">{feature.description}</p>
               </motion.div>
             ))}
           </motion.div>
