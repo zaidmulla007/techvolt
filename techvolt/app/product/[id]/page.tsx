@@ -310,7 +310,6 @@ const productData: any = {
       { name: 'ECAS', image: '3. ECAS.webp' },
       { name: 'EAC', image: '4. EAC.png' },
       { name: 'CCC', image: '5. CCC.png' },
-      { name: 'ICV', image: 'ICV.png' },
     ],
   },
   '4': {
@@ -405,7 +404,6 @@ const productData: any = {
       { name: 'ABS', image: 'ABS-LOGO.jpg' },
       { name: 'CB', image: 'CB.png' },
       { name: 'UL', image: 'UL.jpg' },
-      { name: 'ICV', image: 'ICV.png' },
     ],
   },
   '5': {
@@ -452,7 +450,6 @@ const productData: any = {
       { name: 'EAC Ex', image: '3. EAC Ex.png' },
       { name: 'ABS', image: 'ABS.jpg' },
       { name: 'DNV', image: 'DNV.jpg' },
-      { name: 'ICV', image: 'ICV.png' },
     ],
   },
 };
@@ -518,21 +515,19 @@ export default function ProductDetailPage({ params }: { params: Promise<{ id: st
               >
                 <div className="grid lg:grid-cols-2 gap-8 p-8">
                   {/* Images Section */}
-                  <div className="space-y-4">
-                    <div className="grid gap-4" style={{
-                      gridTemplateColumns: product.images.length > 1 ? 'repeat(auto-fit, minmax(200px, 1fr))' : '1fr'
-                    }}>
+                  <div className="flex items-center">
+                    <div className={`grid gap-4 w-full ${product.images.length > 2 ? 'grid-cols-2' : product.images.length === 2 ? 'grid-cols-2' : 'grid-cols-1'}`}>
                       {product.images.map((image: string, imgIndex: number) => (
                         <motion.div
                           key={imgIndex}
                           whileHover={{ scale: 1.05 }}
-                          className="relative aspect-square rounded-xl overflow-hidden bg-gray-100 shadow-md"
+                          className={`relative rounded-xl overflow-hidden bg-gray-100 shadow-md ${product.images.length === 1 ? 'aspect-[4/3] max-w-md mx-auto w-full' : 'aspect-square'}`}
                         >
                           <Image
                             src={`/images/products/${productInfo.imageFolder}/${image}`}
                             alt={`${product.name} - Image ${imgIndex + 1}`}
                             fill
-                            className="object-cover hover:scale-110 transition-transform duration-500"
+                            className="object-contain p-2 hover:scale-110 transition-transform duration-500"
                           />
                         </motion.div>
                       ))}

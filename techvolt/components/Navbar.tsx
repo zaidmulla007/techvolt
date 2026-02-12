@@ -49,7 +49,7 @@ const Navbar = () => {
       dropdown: [
         { name: 'Custom Solution', href: '/#services' },
         { name: 'For Hazardous Area', href: '/#services' },
-        { name: 'For Lighting Products', href: '/#services' },
+        { name: 'For Lighting Products', href: '/services/lighting-products' },
       ],
     },
     { name: 'Blog', href: '/#blog' },
