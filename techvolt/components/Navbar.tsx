@@ -47,8 +47,8 @@ const Navbar = () => {
       name: 'Services',
       href: '/#services',
       dropdown: [
-        { name: 'Custom Solution', href: '/#services' },
-        { name: 'For Hazardous Area', href: '/#services' },
+        { name: 'Safe Area Products', href: '/services/safe-area-products' },
+        { name: 'For Hazardous Area', href: '/services/hazardous-area' },
         { name: 'For Lighting Products', href: '/services/lighting-products' },
       ],
     },
