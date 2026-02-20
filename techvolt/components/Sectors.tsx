@@ -16,72 +16,84 @@ const Sectors = () => {
       title: 'Oil & Gas',
       description: 'Refineries, offshore rigs, and gas processing plants where explosive gases or vapors are present.',
       gradient: 'from-red-500 to-orange-500',
+      hoverText: 'group-hover:text-orange-500',
     },
     {
       icon: FaIndustry,
       title: 'Petrochemicals & Chemical Processing',
       description: 'Environments with flammable chemicals, solvents, and volatile compounds.',
       gradient: 'from-blue-500 to-cyan-500',
+      hoverText: 'group-hover:text-cyan-500',
     },
     {
       icon: FaMountain,
       title: 'Mining & Mineral Processing',
       description: 'Underground mines, surface operations, and processing units where combustible dust and gases exist.',
       gradient: 'from-yellow-600 to-orange-600',
+      hoverText: 'group-hover:text-orange-600',
     },
     {
       icon: FaPaintRoller,
       title: 'Paint, Coating & Powder Industries',
       description: 'Areas where flammable vapors or fine powder can create hazardous atmospheres.',
       gradient: 'from-pink-500 to-rose-500',
+      hoverText: 'group-hover:text-rose-500',
     },
     {
       icon: FaTint,
       title: 'Wastewater Treatment & Pump Stations',
       description: 'Zones with methane or biogas emissions requiring explosion-proof equipment.',
       gradient: 'from-green-500 to-teal-500',
+      hoverText: 'group-hover:text-teal-500',
     },
     {
       icon: FaSubway,
       title: 'Infrastructure & Transport Hubs',
       description: 'Fuel storage depots, metro systems, and railway facilities with hazardous zones.',
       gradient: 'from-gray-600 to-gray-800',
+      hoverText: 'group-hover:text-gray-700',
     },
     {
       icon: FaHospital,
       title: 'Hospital and Food Processing',
       description: 'Clean room Lights for cleanrooms and other controlled environments in Labs, pharmaceutical production, Hospitals and Food processing Units.',
       gradient: 'from-emerald-500 to-green-600',
+      hoverText: 'group-hover:text-green-600',
     },
     {
       icon: FaThermometerFull,
       title: 'High Temperature Environment',
       description: 'Ex LED Lighting for high temperature +120\u2103 & low temperature -65\u2103 environments.',
       gradient: 'from-red-600 to-red-800',
+      hoverText: 'group-hover:text-red-600',
     },
     {
       icon: FaSeedling,
       title: 'Crops & Animal Husbandry',
       description: 'Biologically efficient Lights for plant growth, cattle farm, and poultry farm productivity.',
       gradient: 'from-lime-500 to-green-500',
+      hoverText: 'group-hover:text-green-500',
     },
     {
       icon: FaShip,
       title: 'Marine and Port Handlings',
       description: 'FloodLights, Container Sockets, Crane lights, Lifting equipment.',
       gradient: 'from-blue-600 to-indigo-600',
+      hoverText: 'group-hover:text-indigo-600',
     },
     {
       icon: FaShieldAlt,
       title: 'Military Facilities and Infrastructure',
       description: 'Ex products for Bunkers, Explosive Storage units, Battery Room, Vandal proof lights for Holding Area.',
       gradient: 'from-slate-600 to-slate-800',
+      hoverText: 'group-hover:text-slate-700',
     },
     {
       icon: FaWarehouse,
       title: 'Distribution Centers / Warehouses',
       description: 'Supply and installation services energy-efficient, LED for Highbay, FloodLights, Linear lights.',
       gradient: 'from-purple-500 to-pink-500',
+      hoverText: 'group-hover:text-pink-500',
     },
   ];
 
@@ -131,7 +143,7 @@ const Sectors = () => {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className={`text-xl font-bold text-gray-900 mb-2 ${sector.hoverText} transition-colors`}>
                   {sector.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">

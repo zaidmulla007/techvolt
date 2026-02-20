@@ -3,13 +3,16 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
-import { FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaChevronDown } from 'react-icons/fa';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,27 +23,21 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/#about' },
     {
-      name: 'Products',
+      name: 'Industrial',
       href: '/#products',
-      megaMenu: [
-        {
-          category: 'INDUSTRIAL',
-          items: [
-            { name: 'Industrial Electrical', href: '/product/1' },
-            { name: 'Industrial Lighting', href: '/product/2' },
-          ],
-        },
-        {
-          category: 'OIL AND GAS',
-          items: [
-            { name: 'Ex Oil & Gas Electrical', href: '/product/3' },
-            { name: 'Ex Oil & Gas Lighting', href: '/product/4' },
-            { name: 'Ex Air Conditions', href: '/product/5' },
-          ],
-        },
+      dropdown: [
+        { name: 'Industrial Electrical', href: '/product/1' },
+        { name: 'Industrial Lighting', href: '/product/2' },
+      ],
+    },
+    {
+      name: 'Oil and Gas',
+      href: '/#products',
+      dropdown: [
+        { name: 'Ex Oil & Gas Electrical', href: '/product/3' },
+        { name: 'Ex Oil & Gas Lighting', href: '/product/4' },
+        { name: 'Ex Air Conditions', href: '/product/5' },
       ],
     },
     {
@@ -52,44 +49,40 @@ const Navbar = () => {
         { name: 'For Lighting Products', href: '/services/lighting-products' },
       ],
     },
-    { name: 'Blog', href: '/#blog' },
-    { name: 'Contact Us', href: '/#contact' },
   ];
 
   return (
     <>
-      {/* Top Bar */}
-      <div className="bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 text-white py-2 px-4 hidden md:block">
-        <div className="container mx-auto flex justify-between items-center text-sm">
+      {/* Spacer for inner pages to push content below fixed navbar */}
+      {!isHomePage && <div className="h-24" />}
+
+      {/* Top Bar - simple nav links on the right, only on home page, hidden on scroll */}
+      <div className={`fixed top-0 left-0 right-0 z-[60] bg-transparent text-white py-2 px-4 hidden ${isHomePage ? 'md:block' : ''} transition-all duration-300 ${scrolled ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100'}`}>
+        <div className="max-w-7xl mx-auto flex justify-end items-center text-sm">
           <div className="flex items-center gap-6">
-            <a href="tel:+971545764342" className="flex items-center gap-2 hover:text-cyan-200 transition-smooth">
-              <FaPhone className="text-xs" />
-              <span>+971 54 576 4342</span>
-            </a>
-            <a href="mailto:info@powerelectricaluae.com" className="flex items-center gap-2 hover:text-cyan-200 transition-smooth">
-              <FaEnvelope className="text-xs" />
-              <span>info@powerelectricaluae.com</span>
-            </a>
-          </div>
-          <div className="text-xs">
-            Office No. 502, Omran Tower, Sharjah, UAE
+            <Link href="/" className="text-white/80 hover:text-white transition-all duration-300 font-medium">Home</Link>
+            <Link href="/#about" className="text-white/80 hover:text-white transition-all duration-300 font-medium">About Us</Link>
+            <Link href="/#blog" className="text-white/80 hover:text-white transition-all duration-300 font-medium">Blog</Link>
+            <Link href="/#contact" className="text-white/80 hover:text-white transition-all duration-300 font-medium">Contact Us</Link>
           </div>
         </div>
       </div>
 
-      {/* Main Navbar */}
+      {/* Main Navbar - Fixed & Transparent */}
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`sticky top-0 z-50 transition-all duration-300 ${
+        className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-white shadow-lg'
-            : 'bg-white'
+            ? 'top-0 bg-white shadow-lg'
+            : !isHomePage
+              ? 'top-0 bg-white shadow-lg'
+              : 'top-0 md:top-[36px] bg-transparent'
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-24">
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -98,11 +91,11 @@ const Navbar = () => {
             >
               <Link href="/">
                 <Image
-                  src="/logo.png"
+                  src={scrolled || !isHomePage ? '/logo-removebg-preview.png' : '/white-logo.png'}
                   alt="Power Electrical"
-                  width={180}
-                  height={60}
-                  className="h-14 w-auto"
+                  width={320}
+                  height={100}
+                  className="h-[90px] w-auto"
                   priority
                 />
               </Link>
@@ -117,88 +110,43 @@ const Navbar = () => {
                       initial={{ opacity: 0, y: -20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className="px-4 py-2 text-gray-700 hover:text-blue-600 font-medium transition-smooth animated-underline cursor-pointer inline-block"
+                      className={`px-4 py-2 font-medium transition-all duration-300 cursor-pointer inline-flex items-center gap-1 relative group ${scrolled || !isHomePage ? 'text-gray-700 hover:text-[#16237D]' : 'text-white/90 hover:text-white'}`}
                     >
                       {item.name}
+                      <FaChevronDown className="text-[10px] opacity-60 group-hover:opacity-100 transition-opacity" />
+                      <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     </motion.span>
                   </Link>
 
-                  {/* Mega Menu for Products */}
-                  {item.megaMenu && (
-                    <div className="absolute left-0 mt-2 w-[500px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
-                      <div className="bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden">
-                        <div className="grid grid-cols-2 gap-4 p-6">
-                          {item.megaMenu.map((section) => (
-                            <div key={section.category}>
-                              <h3 className="font-bold text-sm text-blue-900 mb-3 uppercase tracking-wide border-b border-blue-200 pb-2">
-                                {section.category}
-                              </h3>
-                              <div className="space-y-2">
-                                {section.items.map((subItem) => (
-                                  <Link
-                                    key={subItem.name}
-                                    href={subItem.href}
-                                    className="block px-3 py-2 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 hover:text-blue-600 rounded transition-smooth"
-                                  >
-                                    {subItem.name}
-                                  </Link>
-                                ))}
-                              </div>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
+                  {/* Dropdown */}
+                  <div className={`absolute mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 ${index === navItems.length - 1 ? 'right-0' : 'left-0'}`}>
+                    <div className="bg-white/95 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 overflow-hidden">
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 hover:text-[#1960A4] transition-all duration-200"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
                     </div>
-                  )}
-
-                  {/* Regular Dropdown for Services */}
-                  {item.dropdown && (
-                    <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
-                      <div className="bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 hover:text-blue-600 transition-smooth"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                  </div>
                 </div>
               ))}
-            </div>
-
-            {/* CTA Button - Desktop */}
-            <div className="hidden lg:block">
-              <motion.a
-                href="#contact"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary"
-              >
-                Get Quote
-              </motion.a>
             </div>
 
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="text-gray-700 hover:text-blue-600 focus:outline-none"
+                className={`focus:outline-none transition-colors duration-300 ${scrolled || !isHomePage ? 'text-gray-700 hover:text-[#16237D]' : 'text-white hover:text-cyan-300'}`}
               >
-                <motion.div
-                  initial={false}
-                  animate={isOpen ? 'open' : 'closed'}
-                >
-                  {isOpen ? (
-                    <HiX className="h-8 w-8" />
-                  ) : (
-                    <HiMenu className="h-8 w-8" />
-                  )}
-                </motion.div>
+                {isOpen ? (
+                  <HiX className="h-8 w-8" />
+                ) : (
+                  <HiMenu className="h-8 w-8" />
+                )}
               </button>
             </div>
           </div>
@@ -212,68 +160,40 @@ const Navbar = () => {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden bg-white border-t border-gray-100"
+              className="lg:hidden bg-gradient-to-r from-[#16237D] via-[#1960A4] to-[#16237D] border-t border-white/10 shadow-lg"
             >
-              <div className="container mx-auto px-4 py-4 space-y-2">
+              <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
+                {/* Top links for mobile */}
+                <Link href="/" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">Home</Link>
+                <Link href="/#about" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">About Us</Link>
+
+                {/* Main nav items with dropdowns */}
                 {navItems.map((item) => (
                   <div key={item.name}>
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className="block px-4 py-3 text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 hover:text-blue-600 rounded-lg transition-smooth font-medium"
+                      className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium"
                     >
                       {item.name}
                     </Link>
-
-                    {/* Mega Menu for Products */}
-                    {item.megaMenu && (
-                      <div className="pl-4 space-y-3 mt-2">
-                        {item.megaMenu.map((section) => (
-                          <div key={section.category}>
-                            <h4 className="text-xs font-bold text-blue-900 uppercase tracking-wide px-4 py-2 bg-blue-50 rounded">
-                              {section.category}
-                            </h4>
-                            <div className="space-y-1 mt-1">
-                              {section.items.map((subItem) => (
-                                <Link
-                                  key={subItem.name}
-                                  href={subItem.href}
-                                  onClick={() => setIsOpen(false)}
-                                  className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-smooth"
-                                >
-                                  {subItem.name}
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-
-                    {/* Regular Dropdown for Services */}
-                    {item.dropdown && (
-                      <div className="pl-4 space-y-1 mt-1">
-                        {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            onClick={() => setIsOpen(false)}
-                            className="block px-4 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-smooth"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
+                    <div className="pl-4 space-y-1 mt-1">
+                      {item.dropdown.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          onClick={() => setIsOpen(false)}
+                          className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 ))}
-                <a
-                  href="#contact"
-                  onClick={() => setIsOpen(false)}
-                  className="block btn-primary text-center mt-4"
-                >
-                  Get Quote
-                </a>
+
+                <Link href="/#blog" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">Blog</Link>
+                <Link href="/#contact" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">Contact Us</Link>
               </div>
             </motion.div>
           )}

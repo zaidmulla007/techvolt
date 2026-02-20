@@ -166,20 +166,6 @@ const Products = () => {
             ))}
           </motion.div>
 
-          {/* View All Products Button */}
-          <motion.div
-            variants={cardVariants}
-            className="text-center mt-12"
-          >
-            <motion.a
-              href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="inline-block btn-primary text-lg px-10 py-4"
-            >
-              View Full Catalogue
-            </motion.a>
-          </motion.div>
         </motion.div>
       </div>
     </section>
