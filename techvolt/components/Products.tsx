@@ -18,6 +18,8 @@ const Products = () => {
       title: 'Industrial Electrical',
       description: 'Sockets, Plugs, Junction Boxes, Cable Glands, Isolators, and Distribution Boards',
       color: 'from-blue-500 to-blue-700',
+      hoverText: 'group-hover:text-blue-600',
+      hoverBorder: 'group-hover:border-blue-200',
       features: ['IP66/IP67 Protection', 'High Current Capacity', 'Corrosion Resistant'],
     },
     {
@@ -26,6 +28,8 @@ const Products = () => {
       title: 'Industrial Lighting',
       description: 'LED Highbays, Floodlights, Linear Lights, Street Lights, and Solar Solutions',
       color: 'from-cyan-500 to-cyan-700',
+      hoverText: 'group-hover:text-cyan-600',
+      hoverBorder: 'group-hover:border-cyan-200',
       features: ['Energy Efficient LED', '5 Year Warranty', 'Smart Controls'],
     },
     {
@@ -34,6 +38,8 @@ const Products = () => {
       title: 'Ex Oil & Gas Electrical',
       description: 'ATEX/IECEx certified explosion-proof electrical equipment for hazardous areas',
       color: 'from-purple-500 to-purple-700',
+      hoverText: 'group-hover:text-purple-600',
+      hoverBorder: 'group-hover:border-purple-200',
       features: ['ATEX Certified', 'Zone 1 & 2', 'IECEx Approved', 'ICV Certified'],
     },
     {
@@ -41,7 +47,9 @@ const Products = () => {
       icon: FaFire,
       title: 'Ex Oil & Gas Lighting',
       description: 'Explosion-proof lighting fixtures for oil & gas and chemical industries',
-      color: 'from-orange-500 to-orange-700',
+      color: 'from-red-500 to-rose-700',
+      hoverText: 'group-hover:text-rose-600',
+      hoverBorder: 'group-hover:border-rose-200',
       features: ['Hazardous Area', 'Marine Grade', 'Emergency Backup'],
     },
     {
@@ -50,6 +58,8 @@ const Products = () => {
       title: 'Ex Air Conditions',
       description: 'Explosion-proof air conditioning units for classified hazardous locations',
       color: 'from-green-500 to-green-700',
+      hoverText: 'group-hover:text-green-600',
+      hoverBorder: 'group-hover:border-green-200',
       features: ['Climate Control', 'Positive Pressure', 'Ex Certified', 'ICV Certified'],
     },
   ];
@@ -131,7 +141,7 @@ const Products = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className={`text-2xl font-bold text-gray-900 mb-3 ${product.hoverText} transition-colors`}>
                     {product.title}
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
@@ -160,7 +170,7 @@ const Products = () => {
                 </div>
 
                 {/* Animated Border */}
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-blue-200 rounded-2xl transition-all duration-500" />
+                <div className={`absolute inset-0 border-2 border-transparent ${product.hoverBorder} rounded-2xl transition-all duration-500`} />
               </motion.div>
               </Link>
             ))}

@@ -60,10 +60,10 @@ const Navbar = () => {
       <div className={`fixed top-0 left-0 right-0 z-[60] bg-transparent text-white py-2 px-4 hidden ${isHomePage ? 'md:block' : ''} transition-all duration-300 ${scrolled ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100'}`}>
         <div className="max-w-7xl mx-auto flex justify-end items-center text-sm">
           <div className="flex items-center gap-6">
-            <Link href="/" className="text-white/80 hover:text-white transition-all duration-300 font-medium">Home</Link>
-            <Link href="/#about" className="text-white/80 hover:text-white transition-all duration-300 font-medium">About Us</Link>
-            <Link href="/#blog" className="text-white/80 hover:text-white transition-all duration-300 font-medium">Blog</Link>
-            <Link href="/#contact" className="text-white/80 hover:text-white transition-all duration-300 font-medium">Contact Us</Link>
+            <Link href="/" className="text-white hover:text-cyan-300 transition-all duration-300 font-medium">Home</Link>
+            <Link href="/#about" className="text-white hover:text-cyan-300 transition-all duration-300 font-medium">About Us</Link>
+            <Link href="/#blog" className="text-white hover:text-cyan-300 transition-all duration-300 font-medium">Blog</Link>
+            <Link href="/#contact" className="text-white hover:text-cyan-300 transition-all duration-300 font-medium">Contact Us</Link>
           </div>
         </div>
       </div>
@@ -95,8 +95,9 @@ const Navbar = () => {
                   alt="Power Electrical"
                   width={320}
                   height={100}
-                  className="h-[90px] w-auto"
+                  className={`w-auto ${scrolled || !isHomePage ? 'h-[90px]' : 'h-[140px]'}`}
                   priority
+                  key={scrolled || !isHomePage ? 'color-logo' : 'white-logo'}
                 />
               </Link>
             </motion.div>

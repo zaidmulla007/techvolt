@@ -15,8 +15,8 @@ const Sectors = () => {
       icon: FaOilCan,
       title: 'Oil & Gas',
       description: 'Refineries, offshore rigs, and gas processing plants where explosive gases or vapors are present.',
-      gradient: 'from-red-500 to-orange-500',
-      hoverText: 'group-hover:text-orange-500',
+      gradient: 'from-red-500 to-rose-500',
+      hoverText: 'group-hover:text-rose-500',
     },
     {
       icon: FaIndustry,
@@ -29,8 +29,8 @@ const Sectors = () => {
       icon: FaMountain,
       title: 'Mining & Mineral Processing',
       description: 'Underground mines, surface operations, and processing units where combustible dust and gases exist.',
-      gradient: 'from-yellow-600 to-orange-600',
-      hoverText: 'group-hover:text-orange-600',
+      gradient: 'from-amber-500 to-yellow-600',
+      hoverText: 'group-hover:text-amber-600',
     },
     {
       icon: FaPaintRoller,

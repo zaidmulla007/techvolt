@@ -110,23 +110,12 @@ export default function LightingProductsServicePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row md:items-center md:justify-between mb-10"
+            className="mb-10"
           >
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
-                Lighting Design Service
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" />
-            </div>
-            <div className="mt-4 md:mt-0 flex-shrink-0">
-              <Image
-                src="/logo.png"
-                alt="Power Electrical"
-                width={180}
-                height={60}
-                className="h-16 w-auto"
-              />
-            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+              Lighting Design Service
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" />
           </motion.div>
 
           {/* Intro paragraphs */}
@@ -370,14 +359,6 @@ export default function LightingProductsServicePage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer line */}
-      <div className="bg-gray-100 py-4">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl flex justify-between items-center text-sm text-gray-500">
-          <span>Power Electrical</span>
-          <span>powerelectricaluae.com</span>
-        </div>
-      </div>
 
       <Footer />
     </div>

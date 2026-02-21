@@ -16,6 +16,13 @@ const productStages = [
       'A junction box is a protective enclosure for electrical connections, keeping them safe from environmental hazards and accidental touch. It\'s where wires are joined securely within a wiring system. Ensure reliable outdoor electrical connections with these straightforward and robust boxes. They excel at keeping water out while offering easy access to terminals when needed. Perfect for outdoor lighting, security, and remote monitoring applications that require dependable protection without complexity.',
     image: '/images/services/safe-area-products/1.png',
     imageAlt: 'Waterproof Junction Boxes',
+    features: [
+      'Superior Waterproofing: Rated up to IP69',
+      'Durable Materials: Constructed from GRP or stainless steel',
+      'Flexible Installation: Multiple cable entry options',
+      'User-Friendly Design: Captive fixings ensure parts are not lost',
+      'Customization: Available in custom sizes to suit your needs',
+    ],
   },
   {
     number: 2,
@@ -24,6 +31,13 @@ const productStages = [
       'Heavy-duty terminal enclosures built for harsh outdoor conditions, designed to resist the environmental exposure that typically degrades standard electrical boxes over time. Ideal for marine settings and industrial sites where lower-cost options often fail due to corrosion or weather-related damage.',
     image: '/images/services/safe-area-products/2.png',
     imageAlt: 'Terminal Box Outdoor Applications',
+    features: [
+      'Corrosion-resistant stainless steel construction',
+      'Reliable gasket sealing',
+      'Proven outdoor durability',
+      'Internal mounting hardware included',
+      'Marine-environment compatible',
+    ],
   },
   {
     number: 3,
@@ -32,26 +46,30 @@ const productStages = [
       'Control stations engineered for washdown zones and reliable operator access in harsh conditions. Built for demanding industrial environments where equipment takes heavy use and still needs to perform without interruption. Designed to support process control and machinery operation in outdoor manufacturing areas where dependable performance matters most.',
     image: '/images/services/safe-area-products/3.png',
     imageAlt: 'Industrial Outdoor Control Enclosures',
+    features: [
+      'IP66-rated for washdown protection',
+      'Easy, operator-friendly access',
+      'Strong protection for internal components',
+      'Heavy-duty, rugged construction',
+      'Custom control integration options',
+    ],
   },
   {
     number: 4,
     title: 'Custom Outdoor Solutions:',
     description:
-      'When standard solutions aren\'t quite right, we specialize in creating custom outdoor electrical housings to perfectly match your specific needs. From custom dimensions and specialized mounting solutions to enhanced protective features, we\'re here to solve your unique challenges. We have a proven track record of developing enclosures for a wide array of unusual applications.',
+      'When standard solutions aren\'t quite right, we specialize in creating custom outdoor electrical housings to perfectly match your specific needs. From custom dimensions and specialized mounting solutions to enhanced protective features, we\'re here to solve your unique challenges. We have a proven track record of developing enclosures for a wide array of unusual applications. If you have a demanding requirement, we\'re confident we can devise an effective solution for you.',
     image: '/images/services/safe-area-products/4.png',
     imageAlt: 'Custom Outdoor Solutions',
+    features: [
+      'Flexible Sizing and Configuration: We can build enclosures to any size or configuration you require',
+      'Application-Specific Protection: Get protection tailored precisely to your application\'s needs',
+      'Unique Mounting Solutions: We accommodate unique mounting arrangements',
+      'Customized Cable Entry: Tailored cable entry layouts to fit your setup',
+      'Full Design Support: Benefit from our comprehensive design assistance',
+      'Bespoke Components for Harsh Environments: Custom bases, lids, and canopies designed for resilience in challenging conditions',
+    ],
   },
-];
-
-const keyFeatures = [
-  { label: 'Waterproofing', value: 'Rated up to IP69' },
-  { label: 'Materials', value: 'GRP, Aluminium alloy, mild steel, stainless steel' },
-  { label: 'Corrosion Resistance', value: 'Marine-grade stainless steel construction' },
-  { label: 'IP Ratings', value: 'IP65, IP66, IP67 options available' },
-  { label: 'Custom Sizing', value: 'Built to any size or configuration' },
-  { label: 'Cable Entry', value: 'Tailored cable entry layouts' },
-  { label: 'Mounting Options', value: 'Unique mounting arrangements accommodated' },
-  { label: 'Full Design Support', value: 'Comprehensive design assistance included' },
 ];
 
 const pricingFactors = [
@@ -106,23 +124,12 @@ export default function SafeAreaProductsServicePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row md:items-center md:justify-between mb-10"
+            className="mb-10"
           >
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
-                Weatherproof Enclosures
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" />
-            </div>
-            <div className="mt-4 md:mt-0 flex-shrink-0">
-              <Image
-                src="/logo.png"
-                alt="Power Electrical"
-                width={180}
-                height={60}
-                className="h-16 w-auto"
-              />
-            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+              Weatherproof Enclosures
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" />
           </motion.div>
 
           {/* Intro paragraphs */}
@@ -153,7 +160,7 @@ export default function SafeAreaProductsServicePage() {
           </motion.h3>
 
           {/* Zigzag Stages */}
-          <div className="space-y-8">
+          <div className="space-y-12">
             {productStages.map((stage, index) => {
               const imageOnRight = index % 2 === 0;
               return (
@@ -163,22 +170,38 @@ export default function SafeAreaProductsServicePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5 }}
-                  className={`flex flex-col md:flex-row items-center gap-6 ${imageOnRight ? '' : 'md:flex-row-reverse'}`}
+                  className={`flex flex-col md:flex-row items-start gap-6 ${imageOnRight ? '' : 'md:flex-row-reverse'}`}
                 >
                   {/* Text */}
                   <div className="flex-1">
-                    <p className="text-gray-700 leading-relaxed">
+                    <p className="text-gray-700 leading-relaxed mb-4">
                       <span className="text-blue-900 font-bold text-lg mr-1">{stage.number}.</span>
                       {' '}
                       <span className="font-bold text-gray-900">{stage.title}</span>
                       {' '}
                       {stage.description}
                     </p>
+                    {/* Key Features */}
+                    <div className="space-y-2">
+                      {stage.features.map((feature, fIndex) => (
+                        <motion.div
+                          key={fIndex}
+                          initial={{ opacity: 0, x: 20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.3, delay: fIndex * 0.05 }}
+                          className="flex items-start gap-3 group"
+                        >
+                          <FaCheckCircle className="text-cyan-500 mt-1 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
+                          <span className="text-gray-700">{feature}</span>
+                        </motion.div>
+                      ))}
+                    </div>
                   </div>
 
                   {/* Rounded Image with cyan border */}
                   <div className="flex-shrink-0">
-                    <div className="relative w-48 h-48 sm:w-52 sm:h-52 rounded-full border-[3px] border-cyan-400 overflow-hidden shadow-md">
+                    <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full border-[3px] border-cyan-400 overflow-hidden shadow-md">
                       <Image
                         src={stage.image}
                         alt={stage.imageAlt}
@@ -254,26 +277,6 @@ export default function SafeAreaProductsServicePage() {
               <p className="text-gray-700 leading-relaxed mb-8">
                 Every site has different protection needs — environmental exposure, cable management, IP rating, material strength, and mounting requirements. We offer custom-built enclosures to get the right performance, durability, and protection for your project.
               </p>
-
-              <h4 className="text-lg font-bold text-gray-900 mb-4">What We Offer</h4>
-              <div className="space-y-3">
-                {keyFeatures.map((option, index) => (
-                  <motion.div
-                    key={option.label}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                    className="flex items-start gap-3 group"
-                  >
-                    <FaCheckCircle className="text-cyan-500 mt-1 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
-                    <div>
-                      <span className="font-semibold text-gray-900">{option.label}:</span>{' '}
-                      <span className="text-gray-600">{option.value}</span>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
             </motion.div>
           </div>
 
@@ -339,14 +342,6 @@ export default function SafeAreaProductsServicePage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer line */}
-      <div className="bg-gray-100 py-4">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl flex justify-between items-center text-sm text-gray-500">
-          <span>Power Electrical</span>
-          <span>powerelectricaluae.com</span>
-        </div>
-      </div>
 
       <Footer />
     </div>

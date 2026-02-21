@@ -14,12 +14,12 @@ const enclosureStages = [
     number: 1,
     title: 'Ex d Flameproof Enclosures:',
     description:
-      'Flameproof construction is designed to contain any internal explosion and stop flame propagation into the surrounding atmosphere. The enclosure is built to withstand the resulting internal pressure, while engineered flange joints help cool any escaping gases to below the ignition temperature, making the solution suitable for Zone 1, 2, 21, and 22 hazardous-area applications. Our Ex d enclosures incorporate precision-machined flange gaps that comply with stringent flamepath requirements.',
+      'Flameproof construction is designed to contain any internal explosion and stop flame propagation into the surrounding atmosphere. The enclosure is built to withstand the resulting internal pressure, while engineered flange joints help cool any escaping gases to below the ignition temperature, making the solution suitable for Zone 1, 2, 21, and 22 hazardous-area applications. Our Ex d enclosures incorporate precision-machined flange gaps that comply with stringent flamepath requirements. We also use high-performance gasket materials that maintain long-term compression even after repeated thermal cycling, along with captive stainless-steel screws that make maintenance easier in demanding field environments.',
     features: [
       'IP66 protection rating as standard',
       'Stainless steel or aluminum construction options',
-      'Multiple cable entry configurations',
-      'Full Ex d certification with flamepath test documentation',
+      'Multiple cable entry configurations, positioned to suit your application',
+      'Full Ex d certification, including flamepath test documentation',
       'Temperature range: -50\u00b0C to +135\u00b0C (T4)',
     ],
   },
@@ -27,11 +27,11 @@ const enclosureStages = [
     number: 2,
     title: 'Ex e Increased Safety Enclosures:',
     description:
-      'Enhanced safety protection is designed to eliminate the risk of arcs, sparks, and excessive temperatures through robust mechanical and electrical engineering. Since no sparking parts are allowed inside the enclosure, Ex e becomes a cost-effective option for Zone 1 and Zone 2 installations where the equipment is inherently non-sparking.',
+      'Enhanced safety protection is designed to eliminate the risk of arcs, sparks, and excessive temperatures through robust mechanical and electrical engineering. Since no sparking parts are allowed inside the enclosure, Ex e becomes a cost-effective option for Zone 1 and Zone 2 installations where the equipment is inherently non-sparking. Compared with standard enclosures, the main difference is the systematic prevention of faults that could become ignition sources. This is achieved by using oversized electrical connections, increased spacing between terminals, and materials selected to limit surface temperature rise.',
     features: [
-      'GRP, Stainless steel and aluminium alloy construction',
+      'GRP, Stainless steel and aluminium Alloy construction options',
       'Minimum IP66 protection',
-      'Lower total cost of ownership compared to Ex d',
+      'Lower total cost of ownership compared to Ex d solutions',
       'Quicker installation thanks to simplified cable entry',
       'Well-suited for motor terminal boxes, junction boxes, and control stations',
     ],
@@ -40,7 +40,7 @@ const enclosureStages = [
     number: 3,
     title: 'Ex i Intrinsically Safe Enclosures:',
     description:
-      'Intrinsic safety (IS) limits electrical energy to levels that cannot ignite a hazardous atmosphere\u2014even under fault conditions. This is achieved using associated apparatus such as barriers or isolators, which restrict voltage and current. Our Ex i enclosures are purpose-built to house this equipment while providing robust environmental protection.',
+      'Intrinsic safety (IS) limits electrical energy to levels that cannot ignite a hazardous atmosphere\u2014even under fault conditions. This is achieved using associated apparatus such as barriers or isolators, which restrict voltage and current. Our Ex i enclosures are purpose-built to house this equipment while providing robust environmental protection. We work closely with leading IS barrier manufacturers to ensure correct, reliable integration. Each enclosure is designed to support earth bars, terminal blocks, and tidy cable management, making installations cleaner, easier to maintain, and inspector-friendly.',
     features: [
       'Suitable for Zone 0, 1, 2 (gas) and Zone 20, 21, 22 (dust)',
       'Accommodates Ex ia, Ex ib, and Ex ic classifications',
@@ -52,13 +52,13 @@ const enclosureStages = [
     number: 4,
     title: 'Zone 2 & 22 Non-Sparking Solutions:',
     description:
-      'Zone 2 and Zone 22 account for most industrial hazardous-area installations. In these zones, an explosive atmosphere is expected only in unusual or fault conditions. Type "n" protection concepts are a practical, budget-friendly choice, avoiding the bulk and higher cost typically associated with Zone 1-rated equipment.',
+      'Zone 2 and Zone 22 account for most industrial hazardous-area installations. In these zones, an explosive atmosphere is expected only in unusual or fault conditions\u2014generally less than 10 hours per year. Type "n" protection concepts (such as Ex nA, Ex nR, Ex nC, Ex nL) are a practical, budget-friendly choice, avoiding the bulk and higher cost typically associated with Zone 1-rated equipment. Under ATEX 60079-15, manufacturers may self-declare compliance for certain Zone 2 products. This can translate into shorter lead times, reduced overall cost, and equipment enclosures that are suited to real industrial environments, rather than being optimized solely for laboratory-style conditions.',
     features: [
-      'Ex nA: Non-sparking equipment',
-      'Ex nR: Restricted-breathing protection with IP66 sealing',
-      'Ex nC: Sealed/enclosed switching with protected break contacts',
-      'Ex nL: Energy-limited circuits with defined power restrictions',
-      'Ex nZ: Basic pressurization to control internal atmosphere',
+      'Ex nA: Non-sparking equipment designed so it cannot act as an ignition source',
+      'Ex nR: Restricted-breathing protection achieved using IP66 sealing',
+      'Ex nC: Sealed/enclosed switching with break contacts protected from the atmosphere',
+      'Ex nL: Energy-limited circuits with defined power/energy restrictions',
+      'Ex nZ: Basic pressurization to manage and control the internal atmosphere',
     ],
   },
 ];
@@ -69,7 +69,7 @@ const section3Products = [
     number: 1,
     title: 'Ex Terminal and Junction Boxes:',
     description:
-      'Terminal enclosures built for Industrial/ATEX/IECEx demands. Ex terminal boxes, made of glass fibre reinforced polyester (GRP), aluminium alloy, and stainless steel SS316L, are designed for use in explosive atmospheres: Zones 1, 2 (gases) and 21, 22 (dusts). They feature high resistance to corrosion and UV radiation, ensuring long-term durability even in harsh industrial environments.',
+      'Terminal Enclosures Built for Industrial/ATEX/IECEx Demands. Ex terminal boxes, made of glass fibre reinforced polyester (GRP), Aluminium alloy, Stainless steel SS316L, are designed for use in explosive atmospheres: Zones 1, 2 (gases) and 21, 22 (dusts). They feature high resistance to corrosion and UV radiation, ensuring long-term durability even in harsh industrial environments. The boxes are used in industries such as chemical, petrochemical, and power generation. Internal mounting screws, made of corrosion-resistant materials, significantly increase the durability and service life of the entire structure.',
     image: '/images/services/hazardous-area/Ex Terminal and Junction Boxes.jpg',
     imageAlt: 'Ex Terminal and Junction Boxes',
   },
@@ -77,7 +77,7 @@ const section3Products = [
     number: 2,
     title: 'UPS/NON-UPS PDB (Power Distribution Board):',
     description:
-      'A PDB is mainly built to distribute electrical power safely from an incoming supply to multiple outgoing circuits. In hazardous environments\u2014such as oil and gas facilities, chemical plants, or any location with explosive atmospheres\u2014power distribution must be designed with extreme safety in mind. The choice between a UPS PDB and a standard PDB depends entirely on the criticality of the equipment being powered.',
+      'A PDB is mainly built to distribute electrical power safely from an incoming supply to multiple outgoing circuits. In hazardous environments\u2014such as oil and gas facilities, chemical plants, or any location with explosive atmospheres\u2014power distribution must be designed with extreme safety in mind. The choice between a UPS (Uninterruptible Power Supply) PDB and a standard (non-UPS) PDB depends entirely on the criticality of the equipment being powered. Enclosures are available in two different executions: cover fixed to body by antiloosening screws and cover jointed to body by hinges.',
     image: '/images/services/hazardous-area/UPS-NON-UPS-PDB.png',
     imageAlt: 'UPS/NON UPS PDB Power Distribution Board',
   },
@@ -85,7 +85,7 @@ const section3Products = [
     number: 3,
     title: 'Isolation Switches:',
     description:
-      'Ex ATEX isolation switches are advanced devices that can also act as a main and safety switch (disconnectors and switches in the AC-23 and AC-3 use category). Designed for the safe and permanent disconnection of electrical circuits in gas and dust hazardous areas. Thanks to high-quality components, robust modular construction and compliance with ATEX and IECEx directives, these circuit breakers are the ideal solution for industrial plant designers and end users.',
+      'Ex ATEX isolation switches are advanced devices that can also act as a main and safety switch (they are disconnectors and switches in the AC-23 and AC-3 use category). Ex isolation switches have been designed for the safe and permanent disconnection of electrical circuits in gas and dust hazardous areas. Thanks to the use of high-quality components, robust modular construction and compliance with the requirements of the ATEX and IECEx directives, these circuit breakers are the ideal solution for industrial plant designers, machine manufacturers and end users for whom safety and reliability are a priority.',
     image: '/images/services/hazardous-area/Isolation switches.jpeg',
     imageAlt: 'Isolation Switches',
   },
@@ -93,7 +93,13 @@ const section3Products = [
     number: 4,
     title: 'Sockets and Plugs for Ex Zones:',
     description:
-      'Explosion-proof plugs and sockets are specialised electrical connectors suitable for use in Zones 1, 2, 21 and 22. Their extremely robust housings tightly isolate any potential ignition sources. In the event of a fault, the spark is trapped inside the housing and does not enter the explosive atmosphere. This solution effectively protects people, equipment and infrastructure. Used in oil and gas, chemical and petrochemical plants, bulk material processing, and offshore platforms.',
+      'Explosion-proof plugs and sockets are specialised electrical connectors suitable for use in Zones 1, 2, 21 and 22. Their extremely robust housings tightly isolate any potential ignition sources. In the event of a fault, the spark is trapped inside the housing and does not enter the explosive atmosphere. This solution effectively protects people, equipment and the entire infrastructure from a potential ignition source entering the vicinity of the explosive atmosphere. Explosion-proof sockets can be designed for wall or flange mounting.',
+    industries: [
+      'In the oil and gas industry',
+      'In chemical and petrochemical plants',
+      'In factories processing bulk materials',
+      'On offshore platforms',
+    ],
     image: '/images/services/hazardous-area/Sockets and plugs for Ex zones.jpg',
     imageAlt: 'Sockets and Plugs for Ex Zones',
   },
@@ -101,7 +107,7 @@ const section3Products = [
     number: 5,
     title: 'ATEX / IECEx Cable Glands:',
     description:
-      'ATEX & IECEx cable glands are engineered to securely terminate and fasten electrical cables to equipment, ensuring a safe and dependable connection. They are commonly used with power, control, instrumentation, data, and communication cables. In addition to providing strain relief, these glands help seal enclosures and enhance protection against dust, moisture, and water. Available in metallic, non-metallic, or hybrid constructions.',
+      'ATEX & IECEx cable glands are engineered to securely terminate and fasten electrical cables to equipment, ensuring a safe and dependable connection for machinery and industrial installations. They are commonly used with power, control, instrumentation, data, and communication cables, wherever a robust cable entry system is required. In addition to providing strain relief, these glands help seal enclosures and enhance protection against dust, moisture, and water, making them well-suited for demanding environments exposed to vibration, water contamination, and extreme temperatures. Available in metallic, non-metallic, or hybrid constructions, ATEX & IECEx cable glands are widely used across industries that rely on electrical, power control, instrumentation, automation, and related systems.',
     image: '/images/services/hazardous-area/ATEX__IECEx_Cable_glands.png',
     imageAlt: 'ATEX IECEx Cable Glands',
   },
@@ -114,24 +120,67 @@ const accessoriesSwitched = [
   'Earth stud (external)',
   'Earth continuity plate with internal earth stud',
   'EMC metallic cable glands',
-  'Metallic cable glands for armoured/unarmoured cable',
+  'Metallic cable glands for armoured cable',
+  'Metallic cable glands for unarmoured cable',
 ];
 
 const accessoriesJunctionBox = [
   'Cable glands / caps',
   'Drain and Breather/drain valve',
   'Earth continuity plate (internal) in zinc-plated steel',
-  'External fixing brackets & internal mounting plate',
-  'Blue Terminals & threaded earth-bar',
-  'Earth stud in brass or stainless steel AISI 316L',
+  'External fixing brackets',
+  'Internal mounting plate',
+  'Blue Terminals',
+  'Earth stud (pin, nuts and washer) in brass or stainless steel AISI 316L',
+  'External flanges (only for stainless steel enclosures)',
+  'Threaded earth-bar',
+];
+
+const accessoriesControlStations = [
+  'Buzzer',
+  'Double push button',
+  'Emergency stop',
+  'Mushroom',
+  'Pilot light',
+  'Potentiometer',
+  'Push button',
+  'Push-button with pilot light',
+];
+
+const circuitBreakerModules = [
+  'Circuit breaker module',
+  'AC contactor module',
+  'AC contactor module + thermorelay',
+  'Control transformer',
+  'Creepage breaker module',
+  'Thermorelay module',
+];
+
+const electronicComponents = [
+  'Diode module',
+  'IS Barriers',
+  'Electronic relay module',
+  'Fuses module',
+  'Resistance module',
+  'Voltage suppressor diode module',
+  'Display Control Device',
+];
+
+const instruments = [
+  'Ammeter',
+  'Milliammeter',
+  'Voltmeter',
+  'Temperature-controlled Meter',
 ];
 
 const exProductTypes = [
   'Terminal Junction Box (GRP, Aluminum, SS316L)',
   'Hazardous area Lighting fixtures and junction Boxes',
   'Signal/Analog/Digital/Power Junction Boxes',
-  'Ex Power Distribution Board & UPS/Non-UPS PDB',
-  'Barrier Control Boxes & Communication Junction Box',
+  'Ex Power Distribution Board',
+  'UPS/ Non-UPS PDB',
+  'Barrier Control Boxes',
+  'Communication Junction Box with Patch Panel and Converters',
   'Intrinsically Safe "ia, ib" Terminal Boxes',
   'Isolation switches (GRP, Aluminum, SS316L)',
 ];
@@ -181,29 +230,17 @@ export default function HazardousAreaServicePage() {
       {/* Section 1: Hazardous Area Enclosures Range */}
       <section className="py-14 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-          {/* Title with logo */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col md:flex-row md:items-center md:justify-between mb-10"
+            className="mb-10"
           >
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
-                Our Hazardous Area Enclosures Range
-              </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" />
-            </div>
-            <div className="mt-4 md:mt-0 flex-shrink-0">
-              <Image
-                src="/logo.png"
-                alt="Power Electrical"
-                width={180}
-                height={60}
-                className="h-16 w-auto"
-              />
-            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+              Our Hazardous Area Enclosures Range
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" />
           </motion.div>
 
           {/* Section 1 Image */}
@@ -225,7 +262,7 @@ export default function HazardousAreaServicePage() {
             </div>
           </motion.div>
 
-          {/* Zigzag Enclosure Types */}
+          {/* Enclosure Types */}
           <div className="space-y-10">
             {enclosureStages.map((stage, index) => {
               const contentOnLeft = index % 2 === 0;
@@ -239,7 +276,6 @@ export default function HazardousAreaServicePage() {
                   className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 p-8"
                 >
                   <div className={`flex flex-col md:flex-row gap-6 ${contentOnLeft ? '' : 'md:flex-row-reverse'}`}>
-                    {/* Text content */}
                     <div className="flex-1">
                       <div className="inline-block mb-3">
                         <span className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -325,9 +361,10 @@ export default function HazardousAreaServicePage() {
           </div>
         </div>
 
-        {/* Three accessory cards in one row */}
+        {/* Accessory cards */}
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl mt-10">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Accessories for Switched Interlocked Sockets */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -335,7 +372,7 @@ export default function HazardousAreaServicePage() {
               transition={{ duration: 0.6 }}
               className="bg-white rounded-2xl shadow-lg p-6"
             >
-              <h4 className="text-lg font-bold text-gray-900 mb-4">Accessories for Switched Interlocked Sockets</h4>
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Accessories for Switched Interlocked Sockets & Switch-Disconnectors</h4>
               <div className="space-y-3">
                 {accessoriesSwitched.map((item, index) => (
                   <div key={index} className="flex items-start gap-3 group">
@@ -346,6 +383,7 @@ export default function HazardousAreaServicePage() {
               </div>
             </motion.div>
 
+            {/* Accessories for Junction Boxes */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -364,11 +402,79 @@ export default function HazardousAreaServicePage() {
               </div>
             </motion.div>
 
+            {/* Accessories for Local Control Stations */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-white rounded-2xl shadow-lg p-6"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Accessories for Local Control Stations & Power Distribution</h4>
+              <p className="text-sm font-semibold text-gray-800 mb-2">Actuators & Operation-heads</p>
+              <div className="space-y-2 mb-4">
+                {accessoriesControlStations.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3 group">
+                    <FaCheckCircle className="text-cyan-500 mt-1 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Circuit Breaker Modules */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-white rounded-2xl shadow-lg p-6"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Circuit Breaker Modules</h4>
+              <div className="space-y-3">
+                {circuitBreakerModules.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3 group">
+                    <FaCheckCircle className="text-cyan-500 mt-1 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Electronic Components */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="bg-white rounded-2xl shadow-lg p-6"
+            >
+              <h4 className="text-lg font-bold text-gray-900 mb-4">Electronic Components</h4>
+              <div className="space-y-3">
+                {electronicComponents.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3 group">
+                    <FaCheckCircle className="text-cyan-500 mt-1 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+              <h4 className="text-lg font-bold text-gray-900 mt-6 mb-4">Instruments</h4>
+              <div className="space-y-3">
+                {instruments.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3 group">
+                    <FaCheckCircle className="text-cyan-500 mt-1 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Types of Ex Custom Electrical Products */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
               className="bg-white rounded-2xl shadow-lg p-6"
             >
               <h4 className="text-lg font-bold text-gray-900 mb-4">Types of Ex Custom Electrical Products</h4>
@@ -405,7 +511,7 @@ export default function HazardousAreaServicePage() {
           </motion.div>
 
           {/* Zigzag with round images */}
-          <div className="space-y-8">
+          <div className="space-y-12">
             {section3Products.map((product, index) => {
               const imageOnRight = index % 2 === 0;
               return (
@@ -415,7 +521,7 @@ export default function HazardousAreaServicePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5 }}
-                  className={`flex flex-col md:flex-row items-center gap-6 ${imageOnRight ? '' : 'md:flex-row-reverse'}`}
+                  className={`flex flex-col md:flex-row items-start gap-6 ${imageOnRight ? '' : 'md:flex-row-reverse'}`}
                 >
                   {/* Text */}
                   <div className="flex-1">
@@ -426,11 +532,23 @@ export default function HazardousAreaServicePage() {
                       {' '}
                       {product.description}
                     </p>
+                    {/* Industries list for Sockets and Plugs */}
+                    {'industries' in product && product.industries && (
+                      <div className="mt-4 space-y-2">
+                        <p className="text-gray-800 font-semibold text-sm">Used in:</p>
+                        {product.industries.map((industry: string, iIndex: number) => (
+                          <div key={iIndex} className="flex items-start gap-3 group">
+                            <FaCheckCircle className="text-cyan-500 mt-1 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
+                            <span className="text-gray-700 text-sm">{industry}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
 
                   {/* Rounded Image with cyan border */}
                   <div className="flex-shrink-0">
-                    <div className="relative w-48 h-48 sm:w-52 sm:h-52 rounded-full border-[3px] border-cyan-400 overflow-hidden shadow-md">
+                    <div className="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-full border-[3px] border-cyan-400 overflow-hidden shadow-md">
                       <Image
                         src={product.image}
                         alt={product.imageAlt}
@@ -523,14 +641,6 @@ export default function HazardousAreaServicePage() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer line */}
-      <div className="bg-gray-100 py-4">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl flex justify-between items-center text-sm text-gray-500">
-          <span>Power Electrical</span>
-          <span>powerelectricaluae.com</span>
-        </div>
-      </div>
 
       <Footer />
     </div>
