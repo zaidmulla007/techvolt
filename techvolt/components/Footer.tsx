@@ -72,9 +72,9 @@ const Footer = () => {
             <ul className="space-y-2">
               {[
                 'Industrial Electrical',
-                'Industrial Lightning',
+                'Industrial Lighting',
                 'Ex Oil & Gas Electrical',
-                'Ex Oil & Gas Lightning',
+                'Ex Oil & Gas Lighting',
                 'Ex Air Conditions'
               ].map((item) => (
                 <li key={item}>
@@ -121,7 +121,10 @@ const Footer = () => {
         <div className="border-t border-gray-300 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm">
-              © {currentYear} Power Electrical Trading LLC. All rights reserved.
+              © {currentYear} Power Electrical Trading LLC. All rights reserved. Powered by{' '}
+              <a href="https://zetacoding.com/" target="_blank" rel="noopener noreferrer" className="text-cyan-500 hover:text-cyan-400 font-semibold transition-smooth">
+                Zetacoding
+              </a>
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-gray-600 hover:text-cyan-400 transition-smooth">Privacy Policy</a>

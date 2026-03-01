@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa';
-import { HiCog } from 'react-icons/hi';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -317,6 +317,19 @@ export default function HazardousAreaServicePage() {
       {/* Section 2: Custom Made Explosion-Proof Products */}
       <section className="py-14 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-10"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
+              Custom Made Explosion-Proof Products
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" />
+          </motion.div>
+
           <div className="grid lg:grid-cols-2 gap-10 items-center">
             {/* Image */}
             <motion.div
@@ -345,15 +358,6 @@ export default function HazardousAreaServicePage() {
               transition={{ duration: 0.6 }}
               className="order-1 lg:order-2"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-blue-100 rounded-lg">
-                  <HiCog className="text-2xl text-blue-600" />
-                </div>
-                <span className="text-blue-600 font-semibold">Customization</span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                Custom Made Explosion-Proof Products
-              </h2>
               <p className="text-gray-700 leading-relaxed">
                 We have the flexibility to customize individual switched interlocked socket outlets and switch-disconnected devices using specialized accessories. Based on the product categories, Power Electrical provides custom-made solutions with a high level of customization, backed by a broad range of products and compatible accessories.
               </p>

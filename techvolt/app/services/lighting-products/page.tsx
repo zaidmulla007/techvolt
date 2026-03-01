@@ -200,50 +200,6 @@ export default function LightingProductsServicePage() {
         </div>
       </section>
 
-      {/* Certifications Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              <span className="text-gradient">Certifications</span>
-            </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto mb-6 rounded-full" />
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Our products meet international quality and safety standards
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={cert.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.1, rotate: 2 }}
-                className="flex items-center justify-center p-6 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl hover:shadow-lg transition-all duration-300"
-              >
-                <div className="relative w-full h-24">
-                  <Image
-                    src={cert.image}
-                    alt={cert.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Divider */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent" />
 
@@ -324,6 +280,50 @@ export default function LightingProductsServicePage() {
               ))}
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              <span className="text-gradient">Certifications</span>
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto mb-6 rounded-full" />
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Our products meet international quality and safety standards
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {certifications.map((cert, index) => (
+              <motion.div
+                key={cert.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                whileHover={{ scale: 1.1, rotate: 2 }}
+                className="flex items-center justify-center p-6 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl hover:shadow-lg transition-all duration-300"
+              >
+                <div className="relative w-full h-24">
+                  <Image
+                    src={cert.image}
+                    alt={cert.name}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

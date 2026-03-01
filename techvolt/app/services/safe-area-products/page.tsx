@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa';
-import { HiCube } from 'react-icons/hi';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -70,6 +70,28 @@ const productStages = [
       'Bespoke Components for Harsh Environments: Custom bases, lids, and canopies designed for resilience in challenging conditions',
     ],
   },
+];
+
+const assemblyCapabilities = [
+  'Any Custom any enclosure size',
+  'Provide a range of thicknesses, stainless and mild steels',
+  'Provide enclosures which can be deeper, longer or wider',
+  'Provide any size up to 2000mm x 2000mm x 800mm',
+  'Provide Standard terminals',
+  'Provide trunking',
+  'Provide cable glands',
+  'Provide earth studs to your requirement',
+  'Provide gland plates any side',
+  'Provide base entries',
+  'Provide breather drains',
+  'Provide stopping plugs',
+  'Provide basic earth wiring',
+  'Provide numerous label options',
+  'Provide range of mounting plate options',
+  'Provide mounting feet / welded strap solutions',
+  'Provide unique hinge design allows for IP66 as standard',
+  'Provide terminal rail & earth bar solutions',
+  'Provide alternative finishes and painting on demand',
 ];
 
 const pricingFactors = [
@@ -214,17 +236,6 @@ export default function SafeAreaProductsServicePage() {
               );
             })}
           </div>
-
-          {/* Closing statement */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-gray-700 leading-relaxed text-lg mt-10"
-          >
-            Our complete assembly service allows for rapid delivery in 2-4 weeks. We continuously strive to exceed expectations with quality craftsmanship and reliable solutions for every project.
-          </motion.p>
         </div>
       </section>
 
@@ -265,18 +276,27 @@ export default function SafeAreaProductsServicePage() {
               transition={{ duration: 0.6 }}
               className="order-1 lg:order-2"
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-blue-100 rounded-lg">
-                  <HiCube className="text-2xl text-blue-600" />
-                </div>
-                <span className="text-blue-600 font-semibold">Customization</span>
-              </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                Enclosure Assembly & Custom Options
+                Enclosure Assembly
               </h2>
-              <p className="text-gray-700 leading-relaxed mb-8">
-                Every site has different protection needs — environmental exposure, cable management, IP rating, material strength, and mounting requirements. We offer custom-built enclosures to get the right performance, durability, and protection for your project.
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Our complete assembly service allows for rapid delivery in 2-4 weeks. We can also:
               </p>
+              <div className="space-y-2">
+                {assemblyCapabilities.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.03 }}
+                    className="flex items-start gap-3 group"
+                  >
+                    <FaCheckCircle className="text-cyan-500 mt-1 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </motion.div>
+                ))}
+              </div>
             </motion.div>
           </div>
 
