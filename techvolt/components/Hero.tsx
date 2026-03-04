@@ -17,7 +17,7 @@ const Hero = () => {
           poster="/hero-poster.jpg"
         >
           <source
-            src="/banner-video.mp4"
+            src="https://z2dpyzlkiatdft20.public.blob.vercel-storage.com/banner-video.mp4"
             type="video/mp4"
           />
         </video>
