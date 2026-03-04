@@ -92,21 +92,21 @@ const Hero = () => {
           <div className="flex flex-wrap items-center justify-between gap-4">
             {/* Trust badges on left */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
-              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 border border-white/15">
-                <FaShieldAlt className="text-cyan-300 text-xs sm:text-sm md:text-base" />
-                <span className="text-white font-semibold text-[10px] sm:text-xs md:text-sm">ATEX Certified</span>
+              <div className="flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 border border-white/15">
+                <FaShieldAlt className="text-cyan-300 text-[10px] sm:text-xs md:text-sm" />
+                <span className="text-white font-semibold text-[8px] sm:text-[10px] md:text-xs">ATEX Certified Products</span>
               </div>
-              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 border border-white/15">
-                <FaShieldAlt className="text-blue-300 text-xs sm:text-sm md:text-base" />
-                <span className="text-white font-semibold text-[10px] sm:text-xs md:text-sm">IECEx Approved</span>
+              <div className="flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 border border-white/15">
+                <FaShieldAlt className="text-blue-300 text-[10px] sm:text-xs md:text-sm" />
+                <span className="text-white font-semibold text-[8px] sm:text-[10px] md:text-xs">IECEx Approved Products</span>
               </div>
-              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 border border-white/15">
-                <FaShieldAlt className="text-yellow-300 text-xs sm:text-sm md:text-base" />
-                <span className="text-white font-semibold text-[10px] sm:text-xs md:text-sm">ISO Compliant</span>
+              <div className="flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 border border-white/15">
+                <FaShieldAlt className="text-yellow-300 text-[10px] sm:text-xs md:text-sm" />
+                <span className="text-white font-semibold text-[8px] sm:text-[10px] md:text-xs">ISO Compliant</span>
               </div>
-              <div className="flex items-center gap-1.5 sm:gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 sm:px-4 md:px-5 py-1.5 sm:py-2 md:py-2.5 border border-white/15">
-                <FaShieldAlt className="text-green-300 text-xs sm:text-sm md:text-base" />
-                <span className="text-white font-semibold text-[10px] sm:text-xs md:text-sm">ICV Certified</span>
+              <div className="flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 border border-white/15">
+                <FaShieldAlt className="text-green-300 text-[10px] sm:text-xs md:text-sm" />
+                <span className="text-white font-semibold text-[8px] sm:text-[10px] md:text-xs">ICV Certified</span>
               </div>
             </div>
 

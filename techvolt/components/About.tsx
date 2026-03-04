@@ -98,7 +98,7 @@ const About = () => {
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               About <span className="text-gradient">Power Electrical</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto mb-6 rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-[#16237D] to-[#33E3EE] mx-auto mb-6 rounded-full" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Specialist supplier of industrial and Oil & Gas electrical and lighting solutions
             </p>
@@ -120,31 +120,31 @@ const About = () => {
               <div className="flex flex-wrap gap-4 pt-4">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-lg"
+                  className="flex items-center gap-2 bg-[#16237D]/10 px-4 py-2 rounded-lg"
                 >
-                  <FaCheckCircle className="text-blue-600" />
-                  <span className="font-semibold text-blue-900">ATEX Certified</span>
+                  <FaCheckCircle className="text-[#16237D]" />
+                  <span className="font-semibold text-[#16237D]">ATEX Certified</span>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-2 bg-cyan-50 px-4 py-2 rounded-lg"
+                  className="flex items-center gap-2 bg-[#33E3EE]/10 px-4 py-2 rounded-lg"
                 >
-                  <FaCheckCircle className="text-cyan-600" />
-                  <span className="font-semibold text-cyan-900">IECEx Approved</span>
+                  <FaCheckCircle className="text-[#1960A4]" />
+                  <span className="font-semibold text-[#1960A4]">IECEx Approved</span>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-2 bg-green-50 px-4 py-2 rounded-lg"
+                  className="flex items-center gap-2 bg-[#1960A4]/10 px-4 py-2 rounded-lg"
                 >
-                  <FaCheckCircle className="text-green-600" />
-                  <span className="font-semibold text-green-900">ISO Compliant</span>
+                  <FaCheckCircle className="text-[#1960A4]" />
+                  <span className="font-semibold text-[#020202]">ISO Compliant</span>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="flex items-center gap-2 bg-orange-50 px-4 py-2 rounded-lg"
+                  className="flex items-center gap-2 bg-[#16237D]/10 px-4 py-2 rounded-lg"
                 >
-                  <FaCheckCircle className="text-orange-600" />
-                  <span className="font-semibold text-orange-900">ICV Certified</span>
+                  <FaCheckCircle className="text-[#16237D]" />
+                  <span className="font-semibold text-[#16237D]">ICV Certified</span>
                 </motion.div>
               </div>
             </motion.div>
@@ -154,28 +154,28 @@ const About = () => {
               <div className="grid grid-cols-2 gap-6">
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: 2 }}
-                  className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl p-6 text-white text-center shadow-xl"
+                  className="bg-gradient-to-br from-[#16237D] to-[#1960A4] rounded-2xl p-6 text-white text-center shadow-xl"
                 >
                   <div className="text-4xl font-bold mb-2">15+</div>
                   <div className="text-xs">Years Experience</div>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: -2 }}
-                  className="bg-gradient-to-br from-cyan-500 to-cyan-700 rounded-2xl p-6 text-white text-center shadow-xl"
+                  className="bg-gradient-to-br from-[#1960A4] to-[#33E3EE] rounded-2xl p-6 text-white text-center shadow-xl"
                 >
                   <div className="text-4xl font-bold mb-2">200+</div>
                   <div className="text-xs">Products</div>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: -2 }}
-                  className="bg-gradient-to-br from-purple-600 to-purple-800 rounded-2xl p-6 text-white text-center shadow-xl"
+                  className="bg-gradient-to-br from-[#020202] to-[#16237D] rounded-2xl p-6 text-white text-center shadow-xl"
                 >
                   <div className="text-4xl font-bold mb-2">250+</div>
                   <div className="text-xs">Projects</div>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: 2 }}
-                  className="bg-gradient-to-br from-pink-600 to-pink-800 rounded-2xl p-6 text-white text-center shadow-xl"
+                  className="bg-gradient-to-br from-[#16237D] to-[#33E3EE] rounded-2xl p-6 text-white text-center shadow-xl"
                 >
                   <div className="text-4xl font-bold mb-2">100%</div>
                   <div className="text-xs">Quality</div>
@@ -189,7 +189,7 @@ const About = () => {
             <h3 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               Why <span className="text-gradient">Choose Us</span>
             </h3>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto rounded-full" />
+            <div className="w-20 h-1 bg-gradient-to-r from-[#16237D] to-[#33E3EE] mx-auto rounded-full" />
           </motion.div>
 
           {/* Features Grid */}
@@ -204,8 +204,8 @@ const About = () => {
                 whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
                 className="card-hover bg-white rounded-xl p-6"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center mb-4">
-                  <feature.icon className="text-3xl text-blue-600" />
+                <div className="w-16 h-16 bg-gradient-to-br from-[#16237D]/10 to-[#33E3EE]/10 rounded-full flex items-center justify-center mb-4">
+                  <feature.icon className="text-3xl text-[#1960A4]" />
                 </div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h4>
                 <p className="text-sm text-gray-600 text-left">{feature.description}</p>

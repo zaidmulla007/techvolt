@@ -15,85 +15,85 @@ const Sectors = () => {
       icon: FaOilCan,
       title: 'Oil & Gas',
       description: 'Refineries, offshore rigs, and gas processing plants where explosive gases or vapors are present.',
-      gradient: 'from-red-500 to-rose-500',
-      hoverText: 'group-hover:text-rose-500',
+      gradient: 'from-[#16237D] to-[#1960A4]',
+      hoverText: 'group-hover:text-[#16237D]',
     },
     {
       icon: FaIndustry,
       title: 'Petrochemicals & Chemical Processing',
       description: 'Environments with flammable chemicals, solvents, and volatile compounds.',
-      gradient: 'from-blue-500 to-cyan-500',
-      hoverText: 'group-hover:text-cyan-500',
+      gradient: 'from-[#1960A4] to-[#33E3EE]',
+      hoverText: 'group-hover:text-[#1960A4]',
     },
     {
       icon: FaMountain,
       title: 'Mining & Mineral Processing',
       description: 'Underground mines, surface operations, and processing units where combustible dust and gases exist.',
-      gradient: 'from-amber-500 to-yellow-600',
-      hoverText: 'group-hover:text-amber-600',
+      gradient: 'from-[#020202] to-[#16237D]',
+      hoverText: 'group-hover:text-[#020202]',
     },
     {
       icon: FaPaintRoller,
       title: 'Paint, Coating & Powder Industries',
       description: 'Areas where flammable vapors or fine powder can create hazardous atmospheres.',
-      gradient: 'from-pink-500 to-rose-500',
-      hoverText: 'group-hover:text-rose-500',
+      gradient: 'from-[#16237D] to-[#33E3EE]',
+      hoverText: 'group-hover:text-[#16237D]',
     },
     {
       icon: FaTint,
       title: 'Wastewater Treatment & Pump Stations',
       description: 'Zones with methane or biogas emissions requiring explosion-proof equipment.',
-      gradient: 'from-green-500 to-teal-500',
-      hoverText: 'group-hover:text-teal-500',
+      gradient: 'from-[#1960A4] to-[#16237D]',
+      hoverText: 'group-hover:text-[#1960A4]',
     },
     {
       icon: FaSubway,
       title: 'Infrastructure & Transport Hubs',
       description: 'Fuel storage depots, metro systems, and railway facilities with hazardous zones.',
-      gradient: 'from-gray-600 to-gray-800',
-      hoverText: 'group-hover:text-gray-700',
+      gradient: 'from-[#020202] to-[#1960A4]',
+      hoverText: 'group-hover:text-[#020202]',
     },
     {
       icon: FaHospital,
       title: 'Hospital and Food Processing',
       description: 'Clean room Lights for cleanrooms and other controlled environments in Labs, pharmaceutical production, Hospitals and Food processing Units.',
-      gradient: 'from-emerald-500 to-green-600',
-      hoverText: 'group-hover:text-green-600',
+      gradient: 'from-[#33E3EE] to-[#1960A4]',
+      hoverText: 'group-hover:text-[#1960A4]',
     },
     {
       icon: FaThermometerFull,
       title: 'High Temperature Environment',
       description: 'Ex LED Lighting for high temperature +120\u2103 & low temperature -65\u2103 environments.',
-      gradient: 'from-red-600 to-red-800',
-      hoverText: 'group-hover:text-red-600',
+      gradient: 'from-[#16237D] to-[#020202]',
+      hoverText: 'group-hover:text-[#16237D]',
     },
     {
       icon: FaSeedling,
       title: 'Crops & Animal Husbandry',
       description: 'Biologically efficient Lights for plant growth, cattle farm, and poultry farm productivity.',
-      gradient: 'from-lime-500 to-green-500',
-      hoverText: 'group-hover:text-green-500',
+      gradient: 'from-[#1960A4] to-[#33E3EE]',
+      hoverText: 'group-hover:text-[#1960A4]',
     },
     {
       icon: FaShip,
       title: 'Marine and Port Handlings',
       description: 'FloodLights, Container Sockets, Crane lights, Lifting equipment.',
-      gradient: 'from-blue-600 to-indigo-600',
-      hoverText: 'group-hover:text-indigo-600',
+      gradient: 'from-[#16237D] to-[#1960A4]',
+      hoverText: 'group-hover:text-[#16237D]',
     },
     {
       icon: FaShieldAlt,
       title: 'Military Facilities and Infrastructure',
       description: 'Ex products for Bunkers, Explosive Storage units, Battery Room, Vandal proof lights for Holding Area.',
-      gradient: 'from-slate-600 to-slate-800',
-      hoverText: 'group-hover:text-slate-700',
+      gradient: 'from-[#020202] to-[#16237D]',
+      hoverText: 'group-hover:text-[#020202]',
     },
     {
       icon: FaWarehouse,
       title: 'Distribution Centers / Warehouses',
       description: 'Supply and installation services energy-efficient, LED for Highbay, FloodLights, Linear lights.',
-      gradient: 'from-purple-500 to-pink-500',
-      hoverText: 'group-hover:text-pink-500',
+      gradient: 'from-[#33E3EE] to-[#16237D]',
+      hoverText: 'group-hover:text-[#16237D]',
     },
   ];
 
@@ -115,7 +115,7 @@ const Sectors = () => {
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Trusted Across <span className="text-gradient">Critical Sectors</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto mb-6 rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-[#16237D] to-[#33E3EE] mx-auto mb-6 rounded-full" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our products are engineered to thrive in real-world conditions where failure is not acceptable. In industries that demand total reliability and protection, these enclosures safeguard mission-critical systems with steadfast confidence.
             </p>

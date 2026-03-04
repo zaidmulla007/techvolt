@@ -1,11 +1,82 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa';
+import { FaArrowLeft, FaCheckCircle, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+
+// Image carousel component: shows 2 images per page with arrow navigation
+function ImageCarousel({ images, imageFolder, productName }: { images: string[]; imageFolder: string; productName: string }) {
+  const [page, setPage] = useState(0);
+  const perPage = 2;
+  const totalPages = Math.ceil(images.length / perPage);
+  const currentImages = images.slice(page * perPage, page * perPage + perPage);
+
+  return (
+    <div className="flex flex-col items-center gap-4 w-full">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={page}
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -40 }}
+          transition={{ duration: 0.3 }}
+          className={`grid gap-4 w-full ${currentImages.length === 2 ? 'grid-cols-2' : 'grid-cols-1'}`}
+        >
+          {currentImages.map((image, imgIndex) => (
+            <motion.div
+              key={imgIndex}
+              whileHover={{ scale: 1.05 }}
+              className={`relative rounded-xl overflow-hidden bg-gray-100 shadow-md ${currentImages.length === 1 ? 'aspect-[4/3] max-w-md mx-auto w-full' : 'aspect-square'}`}
+            >
+              <Image
+                src={`/images/products/${imageFolder}/${image}`}
+                alt={`${productName} - Image ${page * perPage + imgIndex + 1}`}
+                fill
+                className="object-contain p-2 hover:scale-110 transition-transform duration-500"
+              />
+            </motion.div>
+          ))}
+        </motion.div>
+      </AnimatePresence>
+
+      {totalPages > 1 && (
+        <div className="flex items-center gap-3 mt-2">
+          <button
+            onClick={() => setPage((p) => Math.max(0, p - 1))}
+            disabled={page === 0}
+            className="p-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white disabled:opacity-30 disabled:cursor-not-allowed hover:shadow-lg transition-all duration-300"
+            aria-label="Previous images"
+          >
+            <FaChevronLeft size={14} />
+          </button>
+          <div className="flex gap-1.5">
+            {Array.from({ length: totalPages }).map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setPage(i)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${i === page ? 'bg-blue-600 w-5' : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                aria-label={`Go to page ${i + 1}`}
+              />
+            ))}
+          </div>
+          <button
+            onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+            disabled={page === totalPages - 1}
+            className="p-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white disabled:opacity-30 disabled:cursor-not-allowed hover:shadow-lg transition-all duration-300"
+            aria-label="Next images"
+          >
+            <FaChevronRight size={14} />
+          </button>
+        </div>
+      )}
+    </div>
+  );
+}
 
 // Product data for Industrial Electrical (ID: 1)
 const productData: any = {
@@ -513,22 +584,11 @@ export default function ProductDetailClient({ id }: { id: string }) {
                 <div className="grid lg:grid-cols-2 gap-8 p-8">
                   {/* Images Section */}
                   <div className="flex items-center">
-                    <div className={`grid gap-4 w-full ${product.images.length > 2 ? 'grid-cols-2' : product.images.length === 2 ? 'grid-cols-2' : 'grid-cols-1'}`}>
-                      {product.images.map((image: string, imgIndex: number) => (
-                        <motion.div
-                          key={imgIndex}
-                          whileHover={{ scale: 1.05 }}
-                          className={`relative rounded-xl overflow-hidden bg-gray-100 shadow-md ${product.images.length === 1 ? 'aspect-[4/3] max-w-md mx-auto w-full' : 'aspect-square'}`}
-                        >
-                          <Image
-                            src={`/images/products/${productInfo.imageFolder}/${image}`}
-                            alt={`${product.name} - Image ${imgIndex + 1}`}
-                            fill
-                            className="object-contain p-2 hover:scale-110 transition-transform duration-500"
-                          />
-                        </motion.div>
-                      ))}
-                    </div>
+                    <ImageCarousel
+                      images={product.images}
+                      imageFolder={productInfo.imageFolder}
+                      productName={product.name}
+                    />
                   </div>
 
                   {/* Content Section */}

@@ -73,13 +73,12 @@ const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
+        className={`fixed left-0 right-0 z-50 transition-all duration-500 ${scrolled
+          ? 'top-0 bg-white shadow-lg'
+          : !isHomePage
             ? 'top-0 bg-white shadow-lg'
-            : !isHomePage
-              ? 'top-0 bg-white shadow-lg'
-              : 'top-0 md:top-[36px] bg-transparent'
-        }`}
+            : 'top-0 md:top-[36px] bg-transparent'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-24">
@@ -91,11 +90,11 @@ const Navbar = () => {
             >
               <Link href="/">
                 <Image
-                  src={scrolled || !isHomePage ? '/logo-removebg-preview.png' : '/white-logo.png'}
+                  src={scrolled || !isHomePage ? '/logo-removebg-preview.png' : '/logo-removebg-preview.png'}
                   alt="Power Electrical"
                   width={320}
                   height={100}
-                  className={`w-auto ${scrolled || !isHomePage ? 'h-[90px]' : 'h-[140px]'}`}
+                  className={`w-auto ${scrolled || !isHomePage ? 'h-[90px]' : 'h-[100px]'}`}
                   priority
                   key={scrolled || !isHomePage ? 'color-logo' : 'white-logo'}
                 />

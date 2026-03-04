@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
@@ -51,11 +52,17 @@ const Footer = () => {
           >
             <h3 className="text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['Home', 'About Us', 'Products', 'Services', 'Blog', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-gray-600 hover:text-cyan-400 transition-smooth text-sm">
-                    {item}
-                  </a>
+              {[
+                { name: 'Home', href: '/' },
+                { name: 'About Us', href: '/#about' },
+                { name: 'Products', href: '/#products' },
+                { name: 'Blog', href: '/#blog' },
+                { name: 'Contact', href: '/#contact' },
+              ].map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-gray-600 hover:text-cyan-400 transition-smooth text-sm">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>

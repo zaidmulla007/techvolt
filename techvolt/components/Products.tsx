@@ -17,9 +17,9 @@ const Products = () => {
       icon: FaPlug,
       title: 'Industrial Electrical',
       description: 'Sockets, Plugs, Junction Boxes, Cable Glands, Isolators, and Distribution Boards',
-      color: 'from-blue-500 to-blue-700',
-      hoverText: 'group-hover:text-blue-600',
-      hoverBorder: 'group-hover:border-blue-200',
+      color: 'from-[#16237D] to-[#1960A4]',
+      hoverText: 'group-hover:text-[#16237D]',
+      hoverBorder: 'group-hover:border-[#16237D]/20',
       features: ['IP66/IP67 Protection', 'High Current Capacity', 'Corrosion Resistant'],
     },
     {
@@ -27,9 +27,9 @@ const Products = () => {
       icon: FaLightbulb,
       title: 'Industrial Lighting',
       description: 'LED Highbays, Floodlights, Linear Lights, Street Lights, and Solar Solutions',
-      color: 'from-cyan-500 to-cyan-700',
-      hoverText: 'group-hover:text-cyan-600',
-      hoverBorder: 'group-hover:border-cyan-200',
+      color: 'from-[#1960A4] to-[#33E3EE]',
+      hoverText: 'group-hover:text-[#1960A4]',
+      hoverBorder: 'group-hover:border-[#33E3EE]/20',
       features: ['Energy Efficient LED', '5 Year Warranty', 'Smart Controls'],
     },
     {
@@ -37,9 +37,9 @@ const Products = () => {
       icon: FaBolt,
       title: 'Ex Oil & Gas Electrical',
       description: 'ATEX/IECEx certified explosion-proof electrical equipment for hazardous areas',
-      color: 'from-purple-500 to-purple-700',
-      hoverText: 'group-hover:text-purple-600',
-      hoverBorder: 'group-hover:border-purple-200',
+      color: 'from-[#020202] to-[#16237D]',
+      hoverText: 'group-hover:text-[#16237D]',
+      hoverBorder: 'group-hover:border-[#16237D]/20',
       features: ['ATEX Certified', 'Zone 1 & 2', 'IECEx Approved', 'ICV Certified'],
     },
     {
@@ -47,9 +47,9 @@ const Products = () => {
       icon: FaFire,
       title: 'Ex Oil & Gas Lighting',
       description: 'Explosion-proof lighting fixtures for oil & gas and chemical industries',
-      color: 'from-red-500 to-rose-700',
-      hoverText: 'group-hover:text-rose-600',
-      hoverBorder: 'group-hover:border-rose-200',
+      color: 'from-[#16237D] to-[#33E3EE]',
+      hoverText: 'group-hover:text-[#1960A4]',
+      hoverBorder: 'group-hover:border-[#33E3EE]/20',
       features: ['Hazardous Area', 'Marine Grade', 'Emergency Backup'],
     },
     {
@@ -57,9 +57,9 @@ const Products = () => {
       icon: FaSnowflake,
       title: 'Ex Air Conditions',
       description: 'Explosion-proof air conditioning units for classified hazardous locations',
-      color: 'from-green-500 to-green-700',
-      hoverText: 'group-hover:text-green-600',
-      hoverBorder: 'group-hover:border-green-200',
+      color: 'from-[#1960A4] to-[#16237D]',
+      hoverText: 'group-hover:text-[#1960A4]',
+      hoverBorder: 'group-hover:border-[#1960A4]/20',
       features: ['Climate Control', 'Positive Pressure', 'Ex Certified', 'ICV Certified'],
     },
   ];
@@ -92,7 +92,7 @@ const Products = () => {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle, #3b82f6 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(circle, #1960A4 1px, transparent 1px)',
           backgroundSize: '50px 50px'
         }} />
       </div>
@@ -109,7 +109,7 @@ const Products = () => {
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
               Our <span className="text-gradient">Product Range</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto mb-6 rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-[#16237D] to-[#33E3EE] mx-auto mb-6 rounded-full" />
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive electrical and lighting solutions for industrial and hazardous environments
             </p>
@@ -130,48 +130,48 @@ const Products = () => {
                   {/* Gradient Header */}
                   <div className={`h-2 bg-gradient-to-r ${product.color}`} />
 
-                <div className="p-8 flex flex-col flex-1">
-                  {/* Icon */}
-                  <div className="relative mb-6">
-                    <div className={`w-20 h-20 bg-gradient-to-br ${product.color} rounded-2xl flex items-center justify-center transform group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-lg`}>
-                      <product.icon className="text-4xl text-white" />
-                    </div>
-                    {/* Glow Effect */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${product.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
-                  </div>
-
-                  {/* Content */}
-                  <h3 className={`text-2xl font-bold text-gray-900 mb-3 ${product.hoverText} transition-colors`}>
-                    {product.title}
-                  </h3>
-                  <p className="text-gray-600 mb-6 leading-relaxed">
-                    {product.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="space-y-2 mb-6 mt-auto">
-                    {product.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
-                        <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${product.color}`} />
-                        <span className="text-sm text-gray-600">{feature}</span>
+                  <div className="p-8 flex flex-col flex-1">
+                    {/* Icon */}
+                    <div className="relative mb-6">
+                      <div className={`w-20 h-20 bg-gradient-to-br ${product.color} rounded-2xl flex items-center justify-center transform group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-lg`}>
+                        <product.icon className="text-4xl text-white" />
                       </div>
-                    ))}
+                      {/* Glow Effect */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${product.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
+                    </div>
+
+                    {/* Content */}
+                    <h3 className={`text-2xl font-bold text-gray-900 mb-3 ${product.hoverText} transition-colors`}>
+                      {product.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {product.description}
+                    </p>
+
+                    {/* Features */}
+                    <div className="space-y-2 mb-6 mt-auto">
+                      {product.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center gap-2">
+                          <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${product.color}`} />
+                          <span className="text-sm text-gray-600">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* CTA Button */}
+                    <motion.div
+                      whileHover={{ scale: 1.05, x: 5 }}
+                      whileTap={{ scale: 0.95 }}
+                      className={`bg-gradient-to-r ${product.color} text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2`}
+                    >
+                      Learn More
+                      <span className="transition-transform">→</span>
+                    </motion.div>
                   </div>
 
-                  {/* CTA Button */}
-                  <motion.div
-                    whileHover={{ scale: 1.05, x: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                    className={`bg-gradient-to-r ${product.color} text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2`}
-                  >
-                    Learn More
-                    <span className="transition-transform">→</span>
-                  </motion.div>
-                </div>
-
-                {/* Animated Border */}
-                <div className={`absolute inset-0 border-2 border-transparent ${product.hoverBorder} rounded-2xl transition-all duration-500`} />
-              </motion.div>
+                  {/* Animated Border */}
+                  <div className={`absolute inset-0 border-2 border-transparent ${product.hoverBorder} rounded-2xl transition-all duration-500`} />
+                </motion.div>
               </Link>
             ))}
           </motion.div>

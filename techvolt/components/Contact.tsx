@@ -264,6 +264,28 @@ const Contact = () => {
               </form>
             </motion.div>
           </div>
+
+          {/* Google Map */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-16"
+          >
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.0!2d55.3898849!3d25.345192!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5b9882edcdc3%3A0xd13d2becab2c7039!2sPower%20Electrical%20Trading%20LLC!5e0!3m2!1sen!2sae!4v1709000000000"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Techvolt Location - Sharjah, UAE"
+                className="rounded-2xl"
+              />
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>
