@@ -102,38 +102,61 @@ const Navbar = () => {
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1">
-              {navItems.map((item, index) => (
-                <div key={item.name} className="relative group">
-                  <Link href={item.href}>
-                    <motion.span
-                      initial={{ opacity: 0, y: -20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className={`px-4 py-2 font-medium transition-all duration-300 cursor-pointer inline-flex items-center gap-1 relative group ${scrolled || !isHomePage ? 'text-gray-700 hover:text-[#16237D]' : 'text-white/90 hover:text-white'}`}
+            <div className="hidden lg:flex flex-col items-end justify-center">
+              {/* Top Row: Home, About Us, Blog, Contact Us — only when scrolled or inner page */}
+              {(scrolled || !isHomePage) && (
+                <div className="flex items-center gap-4 mb-1">
+                  {[
+                    { name: 'Home', href: '/' },
+                    { name: 'About Us', href: '/#about' },
+                    { name: 'Blog', href: '/#blog' },
+                    { name: 'Contact Us', href: '/#contact' },
+                  ].map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="text-sm font-medium text-gray-600 hover:text-[#16237D] transition-all duration-300"
                     >
                       {item.name}
-                      <FaChevronDown className="text-[10px] opacity-60 group-hover:opacity-100 transition-opacity" />
-                      <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                    </motion.span>
-                  </Link>
+                    </Link>
+                  ))}
+                </div>
+              )}
 
-                  {/* Dropdown */}
-                  <div className={`absolute mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 ${index === navItems.length - 1 ? 'right-0' : 'left-0'}`}>
-                    <div className="bg-white/95 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 overflow-hidden">
-                      {item.dropdown.map((subItem) => (
-                        <Link
-                          key={subItem.name}
-                          href={subItem.href}
-                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 hover:text-[#1960A4] transition-all duration-200"
-                        >
-                          {subItem.name}
-                        </Link>
-                      ))}
+              {/* Bottom Row: Industrial, Oil and Gas, Services (with dropdowns) */}
+              <div className="flex items-center space-x-1">
+                {navItems.map((item, index) => (
+                  <div key={item.name} className="relative group">
+                    <Link href={item.href}>
+                      <motion.span
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className={`px-4 py-2 font-medium transition-all duration-300 cursor-pointer inline-flex items-center gap-1 relative group ${scrolled || !isHomePage ? 'text-gray-700 hover:text-[#16237D]' : 'text-white/90 hover:text-white'}`}
+                      >
+                        {item.name}
+                        <FaChevronDown className="text-[10px] opacity-60 group-hover:opacity-100 transition-opacity" />
+                        <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      </motion.span>
+                    </Link>
+
+                    {/* Dropdown */}
+                    <div className={`absolute mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 ${index === navItems.length - 1 ? 'right-0' : 'left-0'}`}>
+                      <div className="bg-white/95 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 overflow-hidden">
+                        {item.dropdown.map((subItem) => (
+                          <Link
+                            key={subItem.name}
+                            href={subItem.href}
+                            className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 hover:text-[#1960A4] transition-all duration-200"
+                          >
+                            {subItem.name}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
