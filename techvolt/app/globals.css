@@ -3,9 +3,10 @@
 :root {
   --primary-blue: #16237D;
   --primary-cyan: #33E3EE;
-  --primary-dark: #020202;
   --secondary-blue: #1960A4;
-  --accent-cyan: #33E3EE;
+  --brand-red: #EC2300;
+  --brand-yellow: #FFBB00;
+  --brand-orange: #FF7518;
   --background: #ffffff;
   --foreground: #171717;
   --gradient-start: #16237D;
@@ -23,6 +24,9 @@
   --color-primary: #16237D;
   --color-secondary: #1960A4;
   --color-accent: #33E3EE;
+  --color-brand-red: #EC2300;
+  --color-brand-yellow: #FFBB00;
+  --color-brand-orange: #FF7518;
 }
 
 html {

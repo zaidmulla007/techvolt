@@ -229,7 +229,7 @@ export default function HazardousAreaServicePage() {
 
       {/* Section 1: Hazardous Area Enclosures Range */}
       <section className="py-14 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -243,70 +243,31 @@ export default function HazardousAreaServicePage() {
             <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" />
           </motion.div>
 
-          {/* Section 1 Image */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-10"
-          >
-            <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-cyan-400 bg-white">
-              <Image
-                src="/images/services/hazardous-area/section-1-image.png"
-                alt="Hazardous Area Enclosures Range"
-                width={1200}
-                height={500}
-                className="w-full h-auto object-contain"
-              />
-            </div>
-          </motion.div>
-
-          {/* Enclosure Types */}
-          <div className="space-y-10">
-            {enclosureStages.map((stage, index) => {
-              const contentOnLeft = index % 2 === 0;
-              return (
-                <motion.div
-                  key={stage.number}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.5 }}
-                  className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 p-8"
-                >
-                  <div className={`flex flex-col md:flex-row gap-6 ${contentOnLeft ? '' : 'md:flex-row-reverse'}`}>
-                    <div className="flex-1">
-                      <div className="inline-block mb-3">
-                        <span className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                          {String(stage.number).padStart(2, '0')}
-                        </span>
-                      </div>
-                      <p className="text-gray-700 leading-relaxed mb-4">
-                        <span className="font-bold text-gray-900 text-lg">{stage.title}</span>
-                        {' '}
-                        {stage.description}
-                      </p>
-                      <div className="space-y-2">
-                        {stage.features.map((feature, fIndex) => (
-                          <motion.div
-                            key={fIndex}
-                            initial={{ opacity: 0, x: 20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.3, delay: fIndex * 0.05 }}
-                            className="flex items-start gap-3 group"
-                          >
-                            <FaCheckCircle className="text-cyan-500 mt-1 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
-                            <span className="text-gray-700">{feature}</span>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+          {/* Enclosure Types - 2x2 Grid */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {enclosureStages.map((stage, index) => (
+              <motion.div
+                key={stage.number}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 p-8"
+              >
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{stage.title.replace(':', '')}</h3>
+                <p className="text-gray-700 leading-relaxed mb-4 text-sm">
+                  {stage.description}
+                </p>
+                <ul className="space-y-2">
+                  {stage.features.map((feature, fIndex) => (
+                    <li key={fIndex} className="flex items-start gap-2 text-sm text-gray-700">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gray-800 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

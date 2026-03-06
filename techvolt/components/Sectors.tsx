@@ -29,8 +29,8 @@ const Sectors = () => {
       icon: FaMountain,
       title: 'Mining & Mineral Processing',
       description: 'Underground mines, surface operations, and processing units where combustible dust and gases exist.',
-      gradient: 'from-[#020202] to-[#16237D]',
-      hoverText: 'group-hover:text-[#020202]',
+      gradient: 'from-[#EC2300] to-[#16237D]',
+      hoverText: 'group-hover:text-[#EC2300]',
     },
     {
       icon: FaPaintRoller,
@@ -50,8 +50,8 @@ const Sectors = () => {
       icon: FaSubway,
       title: 'Infrastructure & Transport Hubs',
       description: 'Fuel storage depots, metro systems, and railway facilities with hazardous zones.',
-      gradient: 'from-[#020202] to-[#1960A4]',
-      hoverText: 'group-hover:text-[#020202]',
+      gradient: 'from-[#FF7518] to-[#1960A4]',
+      hoverText: 'group-hover:text-[#FF7518]',
     },
     {
       icon: FaHospital,
@@ -64,8 +64,8 @@ const Sectors = () => {
       icon: FaThermometerFull,
       title: 'High Temperature Environment',
       description: 'Ex LED Lighting for high temperature +120\u2103 & low temperature -65\u2103 environments.',
-      gradient: 'from-[#16237D] to-[#020202]',
-      hoverText: 'group-hover:text-[#16237D]',
+      gradient: 'from-[#EC2300] to-[#FFBB00]',
+      hoverText: 'group-hover:text-[#EC2300]',
     },
     {
       icon: FaSeedling,
@@ -85,8 +85,8 @@ const Sectors = () => {
       icon: FaShieldAlt,
       title: 'Military Facilities and Infrastructure',
       description: 'Ex products for Bunkers, Explosive Storage units, Battery Room, Vandal proof lights for Holding Area.',
-      gradient: 'from-[#020202] to-[#16237D]',
-      hoverText: 'group-hover:text-[#020202]',
+      gradient: 'from-[#16237D] to-[#EC2300]',
+      hoverText: 'group-hover:text-[#16237D]',
     },
     {
       icon: FaWarehouse,
