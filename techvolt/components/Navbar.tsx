@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -60,10 +60,10 @@ const Navbar = () => {
       <div className={`fixed top-0 left-0 right-0 z-[60] bg-transparent text-white py-2 px-4 hidden ${isHomePage ? 'md:block' : ''} transition-all duration-300 ${scrolled ? 'opacity-0 pointer-events-none -translate-y-full' : 'opacity-100'}`}>
         <div className="max-w-7xl mx-auto flex justify-end items-center text-sm">
           <div className="flex items-center gap-6">
-            <Link href="/" className="text-white hover:text-cyan-300 transition-all duration-300 font-medium">Home</Link>
-            <Link href="/#about" className="text-white hover:text-cyan-300 transition-all duration-300 font-medium">About Us</Link>
-            <Link href="/#blog" className="text-white hover:text-cyan-300 transition-all duration-300 font-medium">Blog</Link>
-            <Link href="/#contact" className="text-white hover:text-cyan-300 transition-all duration-300 font-medium">Contact Us</Link>
+            <a href="/" className="text-white hover:text-[#33E3EE] transition-all duration-300 font-medium">Home</a>
+            <a href="/#about" className="text-white hover:text-[#33E3EE] transition-all duration-300 font-medium">About Us</a>
+            <a href="/#blog" className="text-white hover:text-[#33E3EE] transition-all duration-300 font-medium">Blog</a>
+            <a href="/#contact" className="text-white hover:text-[#33E3EE] transition-all duration-300 font-medium">Contact Us</a>
           </div>
         </div>
       </div>
@@ -88,7 +88,7 @@ const Navbar = () => {
               whileTap={{ scale: 0.95 }}
               className="flex-shrink-0"
             >
-              <Link href="/">
+              <a href="/">
                 <Image
                   src={scrolled || !isHomePage ? '/logo-removebg-preview.png' : '/logo-removebg-preview.png'}
                   alt="Power Electrical"
@@ -98,7 +98,7 @@ const Navbar = () => {
                   priority
                   key={scrolled || !isHomePage ? 'color-logo' : 'white-logo'}
                 />
-              </Link>
+              </a>
             </motion.div>
 
             {/* Desktop Navigation */}
@@ -112,13 +112,13 @@ const Navbar = () => {
                     { name: 'Blog', href: '/#blog' },
                     { name: 'Contact Us', href: '/#contact' },
                   ].map((item) => (
-                    <Link
+                    <a
                       key={item.name}
                       href={item.href}
                       className="text-sm font-medium text-gray-600 hover:text-[#16237D] transition-all duration-300"
                     >
                       {item.name}
-                    </Link>
+                    </a>
                   ))}
                 </div>
               )}
@@ -127,7 +127,7 @@ const Navbar = () => {
               <div className="flex items-center space-x-1">
                 {navItems.map((item, index) => (
                   <div key={item.name} className="relative group">
-                    <Link href={item.href}>
+                    <a href={item.href}>
                       <motion.span
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -136,21 +136,21 @@ const Navbar = () => {
                       >
                         {item.name}
                         <FaChevronDown className="text-[10px] opacity-60 group-hover:opacity-100 transition-opacity" />
-                        <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                        <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-gradient-to-r from-[#33E3EE] to-[#1960A4] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                       </motion.span>
-                    </Link>
+                    </a>
 
                     {/* Dropdown */}
                     <div className={`absolute mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 ${index === navItems.length - 1 ? 'right-0' : 'left-0'}`}>
                       <div className="bg-white/95 backdrop-blur-xl rounded-xl shadow-2xl border border-white/20 overflow-hidden">
                         {item.dropdown.map((subItem) => (
-                          <Link
+                          <a
                             key={subItem.name}
                             href={subItem.href}
                             className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 hover:text-[#1960A4] transition-all duration-200"
                           >
                             {subItem.name}
-                          </Link>
+                          </a>
                         ))}
                       </div>
                     </div>
@@ -163,7 +163,7 @@ const Navbar = () => {
             <div className="lg:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`focus:outline-none transition-colors duration-300 ${scrolled || !isHomePage ? 'text-gray-700 hover:text-[#16237D]' : 'text-white hover:text-cyan-300'}`}
+                className={`focus:outline-none transition-colors duration-300 ${scrolled || !isHomePage ? 'text-gray-700 hover:text-[#16237D]' : 'text-white hover:text-[#33E3EE]'}`}
               >
                 {isOpen ? (
                   <HiX className="h-8 w-8" />
@@ -187,36 +187,36 @@ const Navbar = () => {
             >
               <div className="max-w-7xl mx-auto px-4 py-4 space-y-2">
                 {/* Top links for mobile */}
-                <Link href="/" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">Home</Link>
-                <Link href="/#about" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">About Us</Link>
+                <a href="/" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">Home</a>
+                <a href="/#about" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">About Us</a>
 
                 {/* Main nav items with dropdowns */}
                 {navItems.map((item) => (
                   <div key={item.name}>
-                    <Link
+                    <a
                       href={item.href}
                       onClick={() => setIsOpen(false)}
                       className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium"
                     >
                       {item.name}
-                    </Link>
+                    </a>
                     <div className="pl-4 space-y-1 mt-1">
                       {item.dropdown.map((subItem) => (
-                        <Link
+                        <a
                           key={subItem.name}
                           href={subItem.href}
                           onClick={() => setIsOpen(false)}
                           className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300"
                         >
                           {subItem.name}
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </div>
                 ))}
 
-                <Link href="/#blog" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">Blog</Link>
-                <Link href="/#contact" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">Contact Us</Link>
+                <a href="/#blog" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">Blog</a>
+                <a href="/#contact" onClick={() => setIsOpen(false)} className="block px-4 py-3 text-white/90 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 font-medium">Contact Us</a>
               </div>
             </motion.div>
           )}

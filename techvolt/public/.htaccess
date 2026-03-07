@@ -8,6 +8,19 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.powerelectrical\.com$ [NC]
 RewriteRule ^(.*)$ https://powerelectrical.com/$1 [L,R=301]
 
+# Serve Next.js RSC payload .txt files with correct content type
+<FilesMatch "^__next\..*\.txt$">
+    Header set Content-Type "text/x-component; charset=utf-8"
+    Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Serve .txt files inside __next.* directories
+<DirectoryMatch "__next\.">
+    <FilesMatch "\.txt$">
+        Header set Content-Type "text/x-component; charset=utf-8"
+    </FilesMatch>
+</DirectoryMatch>
+
 # Remove .html extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
@@ -17,6 +30,10 @@ RewriteRule ^(.*)$ $1.html [L]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteCond %{REQUEST_FILENAME}/index.html -f
 RewriteRule ^(.*)$ $1/index.html [L]
+
+# Serve existing files directly (including .txt RSC payloads)
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^(.*)$ - [L]
 
 # Handle SPA-style routing - serve 404.html for missing files
 RewriteCond %{REQUEST_FILENAME} !-f

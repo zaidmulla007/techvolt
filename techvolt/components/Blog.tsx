@@ -45,8 +45,8 @@ const Blog = () => {
         <section id="blog" className="py-20 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
             {/* Background Elements */}
             <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-20 left-10 w-80 h-80 bg-blue-400 rounded-full filter blur-3xl" />
-                <div className="absolute bottom-20 right-10 w-80 h-80 bg-cyan-400 rounded-full filter blur-3xl" />
+                <div className="absolute top-20 left-10 w-80 h-80 bg-[#1960A4] rounded-full filter blur-3xl" />
+                <div className="absolute bottom-20 right-10 w-80 h-80 bg-[#33E3EE] rounded-full filter blur-3xl" />
             </div>
 
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

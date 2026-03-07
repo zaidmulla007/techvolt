@@ -65,7 +65,7 @@ const Clients = () => {
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
                 Trusted by <span className="text-gradient">Industry Leaders</span>
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto mb-6 rounded-full" />
+              <div className="w-24 h-1 bg-gradient-to-r from-[#16237D] to-[#33E3EE] mx-auto mb-6 rounded-full" />
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
@@ -101,7 +101,7 @@ const Clients = () => {
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
                 Our <span className="text-gradient">Partners</span>
               </h3>
-              <div className="w-20 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full" />
+              <div className="w-20 h-1 bg-gradient-to-r from-[#33E3EE] to-[#16237D] mx-auto rounded-full" />
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 items-center">

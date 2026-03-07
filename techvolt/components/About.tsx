@@ -16,70 +16,70 @@ const About = () => {
       title: 'Industry-Focused Portfolio',
       description: 'Curated product lines for warehouses, manufacturing plants, cold storage, hazardous areas (oil & gas, chemical), sports halls and large retail spaces.',
       iconColor: 'text-[#16237D]',
-      bgGradient: 'from-[#16237D]/10 to-[#1960A4]/10',
+      bgColor: '#16237D',
     },
     {
       icon: FaCog,
       title: 'Technical Depth',
       description: 'Product families include standard, cold-storage, high-output and certified hazardous-area variants with datasheets, IES files, and test reports.',
       iconColor: 'text-[#1960A4]',
-      bgGradient: 'from-[#1960A4]/10 to-[#33E3EE]/10',
+      bgColor: '#1960A4',
     },
     {
       icon: FaCheckCircle,
       title: 'Compliance & Safety',
       description: 'Products carry CE, CB, RoHS, UL/CSA and hazardous-area certifications (ATEX/IECEx/UL/ECAS) when required.',
       iconColor: 'text-[#EC2300]',
-      bgGradient: 'from-[#EC2300]/10 to-[#16237D]/10',
+      bgColor: '#EC2300',
     },
     {
       icon: FaUsers,
       title: 'After-Sales Support',
       description: 'Field trials, sample testing, local commissioning assistance, spares availability and standardized warranty terms.',
       iconColor: 'text-[#33E3EE]',
-      bgGradient: 'from-[#33E3EE]/10 to-[#1960A4]/10',
+      bgColor: '#33E3EE',
     },
     {
       icon: FaBrain,
       title: 'Expert Knowledge',
       description: 'Over years of specializing in industrial / hazardous area products with deep understanding of ATEX/IECEx regulations and zone requirements.',
       iconColor: 'text-[#FFBB00]',
-      bgGradient: 'from-[#FFBB00]/10 to-[#FF7518]/10',
+      bgColor: '#FFBB00',
     },
     {
       icon: FaGlobeAmericas,
       title: 'Manufacturing Origin',
       description: 'All products are manufactured in various Countries and available as per the requirement with full quality control and traceability.',
       iconColor: 'text-[#FF7518]',
-      bgGradient: 'from-[#FF7518]/10 to-[#EC2300]/10',
+      bgColor: '#FF7518',
     },
     {
       icon: FaTruck,
       title: 'Rapid Delivery',
       description: 'Fast turnaround times without compromising on quality standards or certification requirements. Air and Sea shipment on every month.',
       iconColor: 'text-[#16237D]',
-      bgGradient: 'from-[#16237D]/10 to-[#33E3EE]/10',
+      bgColor: '#16237D',
     },
     {
       icon: FaTools,
       title: 'Custom Solutions',
       description: 'Bespoke designs manufactured to your exact specifications with full certification support on Electrical and Lighting.',
       iconColor: 'text-[#EC2300]',
-      bgGradient: 'from-[#EC2300]/10 to-[#FFBB00]/10',
+      bgColor: '#EC2300',
     },
     {
       icon: FaHandshake,
       title: 'Personal Service',
       description: 'Direct access to our technical manufacturer team for your application support and project consultation.',
       iconColor: 'text-[#1960A4]',
-      bgGradient: 'from-[#1960A4]/10 to-[#16237D]/10',
+      bgColor: '#1960A4',
     },
     {
       icon: FaBoxes,
       title: 'Wide Range of Products',
       description: 'Partnering with multiple manufacturers gives us the advantage of offering a wide certified product range.',
       iconColor: 'text-[#FFBB00]',
-      bgGradient: 'from-[#FFBB00]/10 to-[#1960A4]/10',
+      bgColor: '#FFBB00',
     },
   ];
 
@@ -174,28 +174,32 @@ const About = () => {
               <div className="grid grid-cols-2 gap-6">
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: 2 }}
-                  className="bg-gradient-to-br from-[#16237D] to-[#1960A4] rounded-2xl p-6 text-white text-center shadow-xl"
+                  className="rounded-2xl p-6 text-white text-center shadow-xl"
+                  style={{ backgroundColor: '#16237D' }}
                 >
                   <div className="text-4xl font-bold mb-2">15+</div>
                   <div className="text-xs">Years Experience</div>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: -2 }}
-                  className="bg-gradient-to-br from-[#33E3EE] to-[#1960A4] rounded-2xl p-6 text-white text-center shadow-xl"
+                  className="rounded-2xl p-6 text-white text-center shadow-xl"
+                  style={{ backgroundColor: '#33E3EE' }}
                 >
                   <div className="text-4xl font-bold mb-2">200+</div>
                   <div className="text-xs">Products</div>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: -2 }}
-                  className="bg-gradient-to-br from-[#EC2300] to-[#FF7518] rounded-2xl p-6 text-white text-center shadow-xl"
+                  className="rounded-2xl p-6 text-white text-center shadow-xl"
+                  style={{ backgroundColor: '#EC2300' }}
                 >
                   <div className="text-4xl font-bold mb-2">250+</div>
                   <div className="text-xs">Projects</div>
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05, rotate: 2 }}
-                  className="bg-gradient-to-br from-[#FFBB00] to-[#FF7518] rounded-2xl p-6 text-white text-center shadow-xl"
+                  className="rounded-2xl p-6 text-white text-center shadow-xl"
+                  style={{ backgroundColor: '#FFBB00' }}
                 >
                   <div className="text-4xl font-bold mb-2">100%</div>
                   <div className="text-xs">Quality</div>
@@ -224,7 +228,7 @@ const About = () => {
                 whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
                 className="card-hover bg-white rounded-xl p-6"
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${feature.bgGradient} rounded-full flex items-center justify-center mb-4`}>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mb-4" style={{ backgroundColor: `${feature.bgColor}15` }}>
                   <feature.icon className={`text-3xl ${feature.iconColor}`} />
                 </div>
                 <h4 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h4>

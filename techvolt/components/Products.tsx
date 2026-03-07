@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaLightbulb, FaPlug, FaBolt, FaSnowflake, FaFire } from 'react-icons/fa';
-import Link from 'next/link';
+
 
 const Products = () => {
   const [ref, inView] = useInView({
@@ -17,7 +17,7 @@ const Products = () => {
       icon: FaPlug,
       title: 'Industrial Electrical',
       description: 'Sockets, Plugs, Junction Boxes, Cable Glands, Isolators, and Distribution Boards',
-      color: 'from-[#16237D] to-[#1960A4]',
+      color: '#16237D',
       hoverText: 'group-hover:text-[#16237D]',
       hoverBorder: 'group-hover:border-[#16237D]/20',
       features: ['IP66/IP67 Protection', 'High Current Capacity', 'Corrosion Resistant'],
@@ -27,7 +27,7 @@ const Products = () => {
       icon: FaLightbulb,
       title: 'Industrial Lighting',
       description: 'LED Highbays, Floodlights, Linear Lights, Street Lights, and Solar Solutions',
-      color: 'from-[#33E3EE] to-[#1960A4]',
+      color: '#33E3EE',
       hoverText: 'group-hover:text-[#33E3EE]',
       hoverBorder: 'group-hover:border-[#33E3EE]/20',
       features: ['Energy Efficient LED', '5 Year Warranty', 'Smart Controls'],
@@ -37,7 +37,7 @@ const Products = () => {
       icon: FaBolt,
       title: 'Ex Oil & Gas Electrical',
       description: 'ATEX/IECEx certified explosion-proof electrical equipment for hazardous areas',
-      color: 'from-[#EC2300] to-[#16237D]',
+      color: '#EC2300',
       hoverText: 'group-hover:text-[#EC2300]',
       hoverBorder: 'group-hover:border-[#EC2300]/20',
       features: ['ATEX Certified', 'Zone 1 & 2', 'IECEx Approved', 'ICV Certified'],
@@ -47,7 +47,7 @@ const Products = () => {
       icon: FaFire,
       title: 'Ex Oil & Gas Lighting',
       description: 'Explosion-proof lighting fixtures for oil & gas and chemical industries',
-      color: 'from-[#FFBB00] to-[#FF7518]',
+      color: '#FFBB00',
       hoverText: 'group-hover:text-[#FFBB00]',
       hoverBorder: 'group-hover:border-[#FFBB00]/20',
       features: ['Hazardous Area', 'Marine Grade', 'Emergency Backup'],
@@ -57,7 +57,7 @@ const Products = () => {
       icon: FaSnowflake,
       title: 'Ex Air Conditions',
       description: 'Explosion-proof air conditioning units for classified hazardous locations',
-      color: 'from-[#1960A4] to-[#16237D]',
+      color: '#1960A4',
       hoverText: 'group-hover:text-[#1960A4]',
       hoverBorder: 'group-hover:border-[#1960A4]/20',
       features: ['Climate Control', 'Positive Pressure', 'Ex Certified', 'ICV Certified'],
@@ -121,23 +121,23 @@ const Products = () => {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
           >
             {productCategories.map((product, index) => (
-              <Link key={index} href={`/product/${product.id}`} className="block w-full max-w-sm">
+              <a key={index} href={`/product/${product.id}`} className="block w-full max-w-sm">
                 <motion.div
                   variants={cardVariants}
                   whileHover={{ y: -15, scale: 1.03 }}
                   className="group relative bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500 cursor-pointer h-full flex flex-col"
                 >
-                  {/* Gradient Header */}
-                  <div className={`h-2 bg-gradient-to-r ${product.color}`} />
+                  {/* Color Header */}
+                  <div className="h-2" style={{ backgroundColor: product.color }} />
 
                   <div className="p-8 flex flex-col flex-1">
                     {/* Icon */}
                     <div className="relative mb-6">
-                      <div className={`w-20 h-20 bg-gradient-to-br ${product.color} rounded-2xl flex items-center justify-center transform group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-lg`}>
+                      <div className="w-20 h-20 rounded-2xl flex items-center justify-center transform group-hover:rotate-6 group-hover:scale-110 transition-all duration-500 shadow-lg" style={{ backgroundColor: product.color }}>
                         <product.icon className="text-4xl text-white" />
                       </div>
                       {/* Glow Effect */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${product.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`} />
+                      <div className="absolute inset-0 rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500" style={{ backgroundColor: product.color }} />
                     </div>
 
                     {/* Content */}
@@ -152,7 +152,7 @@ const Products = () => {
                     <div className="space-y-2 mb-6 mt-auto">
                       {product.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2">
-                          <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${product.color}`} />
+                          <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: product.color }} />
                           <span className="text-sm text-gray-600">{feature}</span>
                         </div>
                       ))}
@@ -162,7 +162,8 @@ const Products = () => {
                     <motion.div
                       whileHover={{ scale: 1.05, x: 5 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`bg-gradient-to-r ${product.color} text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2`}
+                      className="text-white px-6 py-3 rounded-lg font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2"
+                      style={{ backgroundColor: product.color }}
                     >
                       Learn More
                       <span className="transition-transform">→</span>
@@ -172,7 +173,7 @@ const Products = () => {
                   {/* Animated Border */}
                   <div className={`absolute inset-0 border-2 border-transparent ${product.hoverBorder} rounded-2xl transition-all duration-500`} />
                 </motion.div>
-              </Link>
+              </a>
             ))}
           </motion.div>
 

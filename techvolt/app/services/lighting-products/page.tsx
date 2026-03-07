@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
+
 import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa';
 import { HiChip } from 'react-icons/hi';
 import Navbar from '@/components/Navbar';
@@ -73,10 +73,10 @@ export default function LightingProductsServicePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-600 relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-[#16237D] via-[#1960A4] to-[#33E3EE] relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-400 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-400 rounded-full blur-3xl" />
+          <div className="absolute top-20 left-10 w-72 h-72 bg-[#33E3EE] rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#1960A4] rounded-full blur-3xl" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -84,13 +84,13 @@ export default function LightingProductsServicePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Link
+            <a
               href="/"
               className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-smooth"
             >
               <FaArrowLeft />
               <span>Back to Home</span>
-            </Link>
+            </a>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
               Lighting Products
             </h1>
@@ -115,7 +115,7 @@ export default function LightingProductsServicePage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
               Lighting Design Service
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full" />
+            <div className="w-24 h-1 bg-gradient-to-r from-[#16237D] to-[#33E3EE] rounded-full" />
           </motion.div>
 
           {/* Intro paragraphs */}
@@ -162,7 +162,7 @@ export default function LightingProductsServicePage() {
                   {/* Text */}
                   <div className="flex-1">
                     <p className="text-gray-700 leading-relaxed">
-                      <span className="text-blue-900 font-bold text-lg mr-1">{stage.number}.</span>
+                      <span className="text-[#16237D] font-bold text-lg mr-1">{stage.number}.</span>
                       {' '}
                       <span className="font-bold text-gray-900">{stage.title}</span>
                       {' '}
@@ -172,7 +172,7 @@ export default function LightingProductsServicePage() {
 
                   {/* Rounded Image with cyan border */}
                   <div className="flex-shrink-0">
-                    <div className="relative w-48 h-48 sm:w-52 sm:h-52 rounded-full border-[3px] border-cyan-400 overflow-hidden shadow-md">
+                    <div className="relative w-48 h-48 sm:w-52 sm:h-52 rounded-full border-[3px] border-[#33E3EE] overflow-hidden shadow-md">
                       <Image
                         src={stage.image}
                         alt={stage.imageAlt}
@@ -216,7 +216,7 @@ export default function LightingProductsServicePage() {
               transition={{ duration: 0.6 }}
               className="order-2 lg:order-1"
             >
-              <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-cyan-400 bg-white">
+              <div className="rounded-2xl overflow-hidden shadow-xl border-4 border-[#33E3EE] bg-white">
                 <Image
                   src="/images/services/lighting-products/section-2.png"
                   alt="Choose Lighting Fixtures Components"
@@ -236,10 +236,10 @@ export default function LightingProductsServicePage() {
               className="order-1 lg:order-2"
             >
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-2 bg-blue-100 rounded-lg">
-                  <HiChip className="text-2xl text-blue-600" />
+                <div className="p-2 bg-[#1960A4]/10 rounded-lg">
+                  <HiChip className="text-2xl text-[#1960A4]" />
                 </div>
-                <span className="text-blue-600 font-semibold">Customization</span>
+                <span className="text-[#1960A4] font-semibold">Customization</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
                 Choose Lighting Fixtures Components for Your LED Lighting Fixtures
@@ -271,7 +271,7 @@ export default function LightingProductsServicePage() {
                   transition={{ duration: 0.3, delay: index * 0.05 }}
                   className="flex items-start gap-3 group"
                 >
-                  <FaCheckCircle className="text-cyan-500 mt-1 flex-shrink-0 group-hover:text-blue-600 transition-colors" />
+                  <FaCheckCircle className="text-[#33E3EE] mt-1 flex-shrink-0 group-hover:text-[#1960A4] transition-colors" />
                   <div>
                     <span className="font-semibold text-gray-900">{option.label}:</span>{' '}
                     <span className="text-gray-600">{option.value}</span>
@@ -296,7 +296,7 @@ export default function LightingProductsServicePage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
               <span className="text-gradient">Certifications</span>
             </h2>
-            <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto mb-6 rounded-full" />
+            <div className="w-20 h-1 bg-gradient-to-r from-[#16237D] to-[#33E3EE] mx-auto mb-6 rounded-full" />
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Our products meet international quality and safety standards
             </p>
@@ -311,7 +311,7 @@ export default function LightingProductsServicePage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ scale: 1.1, rotate: 2 }}
-                className="flex items-center justify-center p-6 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl hover:shadow-lg transition-all duration-300"
+                className="flex items-center justify-center p-6 bg-gradient-to-br from-gray-50 to-[#1960A4]/5 rounded-xl hover:shadow-lg transition-all duration-300"
               >
                 <div className="relative w-full h-24">
                   <Image
@@ -328,7 +328,7 @@ export default function LightingProductsServicePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-600">
+      <section className="py-16 bg-gradient-to-br from-[#16237D] via-[#1960A4] to-[#33E3EE]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -343,18 +343,18 @@ export default function LightingProductsServicePage() {
               Contact our team for a free consultation and let us design the perfect lighting solution for your project.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+              <a
                 href="/#contact"
-                className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-smooth shadow-xl hover:shadow-2xl"
+                className="inline-block bg-white text-[#16237D] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-smooth shadow-xl hover:shadow-2xl"
               >
                 Get in Touch
-              </Link>
-              <Link
+              </a>
+              <a
                 href="/product/2"
                 className="inline-block bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-smooth"
               >
                 View Lighting Products
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>

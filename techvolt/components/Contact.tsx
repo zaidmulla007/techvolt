@@ -33,21 +33,21 @@ const Contact = () => {
       title: 'Phone',
       content: '+971 54 576 4342',
       link: 'tel:+971545764342',
-      color: 'from-[#16237D] to-[#1960A4]',
+      color: '#16237D',
     },
     {
       icon: FaEnvelope,
       title: 'Email',
       content: 'info@powerelectricaluae.com',
       link: 'mailto:info@powerelectricaluae.com',
-      color: 'from-[#1960A4] to-[#33E3EE]',
+      color: '#1960A4',
     },
     {
       icon: FaMapMarkerAlt,
       title: 'Address',
       content: 'Office No. 502, Omran Tower, Sharjah, UAE',
       link: '#',
-      color: 'from-[#EC2300] to-[#FF7518]',
+      color: '#EC2300',
     },
   ];
 
@@ -99,7 +99,7 @@ const Contact = () => {
                   className="block bg-white rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group"
                 >
                   <div className="flex items-start gap-4">
-                    <div className={`w-14 h-14 bg-gradient-to-br ${info.color} rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                    <div className="w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300" style={{ backgroundColor: info.color }}>
                       <info.icon className="text-2xl text-white" />
                     </div>
                     <div>
@@ -117,7 +117,8 @@ const Contact = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="bg-gradient-to-br from-[#16237D] to-[#1960A4] rounded-xl p-6 text-white shadow-xl"
+                className="rounded-xl p-6 text-white shadow-xl"
+                style={{ backgroundColor: '#16237D' }}
               >
                 <h3 className="font-bold text-lg mb-3">Business Hours</h3>
                 <div className="space-y-2 text-sm">

@@ -39,7 +39,7 @@ const Hero = () => {
             >
               Powering Industries
               <br />
-              <span className="bg-gradient-to-r from-cyan-300 via-blue-200 to-cyan-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#33E3EE] via-[#1960A4] to-[#33E3EE] bg-clip-text text-transparent">
                 Safely & Efficiently
               </span>
             </motion.h1>
@@ -74,7 +74,7 @@ const Hero = () => {
                 href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="px-7 py-3.5 bg-gradient-to-r from-cyan-400 to-blue-500 text-white rounded-lg font-bold text-base hover:from-cyan-300 hover:to-blue-400 transition-all duration-300 shadow-lg shadow-cyan-500/25"
+                className="px-7 py-3.5 bg-gradient-to-r from-[#33E3EE] to-[#1960A4] text-white rounded-lg font-bold text-base hover:from-[#33E3EE] hover:to-[#1960A4] transition-all duration-300 shadow-lg shadow-[#33E3EE]/25"
               >
                 Get Quote
               </motion.a>
@@ -93,19 +93,19 @@ const Hero = () => {
             {/* Trust badges on left */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-3">
               <div className="flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 border border-white/15">
-                <FaShieldAlt className="text-cyan-300 text-[10px] sm:text-xs md:text-sm" />
+                <FaShieldAlt className="text-[#33E3EE] text-[10px] sm:text-xs md:text-sm" />
                 <span className="text-white font-semibold text-[8px] sm:text-[10px] md:text-xs">ATEX Certified Products</span>
               </div>
               <div className="flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 border border-white/15">
-                <FaShieldAlt className="text-blue-300 text-[10px] sm:text-xs md:text-sm" />
+                <FaShieldAlt className="text-[#1960A4] text-[10px] sm:text-xs md:text-sm" />
                 <span className="text-white font-semibold text-[8px] sm:text-[10px] md:text-xs">IECEx Approved Products</span>
               </div>
               <div className="flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 border border-white/15">
-                <FaShieldAlt className="text-yellow-300 text-[10px] sm:text-xs md:text-sm" />
+                <FaShieldAlt className="text-[#FFBB00] text-[10px] sm:text-xs md:text-sm" />
                 <span className="text-white font-semibold text-[8px] sm:text-[10px] md:text-xs">ISO Compliant</span>
               </div>
               <div className="flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 border border-white/15">
-                <FaShieldAlt className="text-green-300 text-[10px] sm:text-xs md:text-sm" />
+                <FaShieldAlt className="text-[#33E3EE] text-[10px] sm:text-xs md:text-sm" />
                 <span className="text-white font-semibold text-[8px] sm:text-[10px] md:text-xs">ICV Certified</span>
               </div>
             </div>
@@ -113,7 +113,7 @@ const Hero = () => {
             {/* Stats on right */}
             <div className="flex items-center gap-4 sm:gap-6">
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-blue-400 to-cyan-400 flex items-center justify-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-[#1960A4] to-[#33E3EE] flex items-center justify-center">
                   <FaIndustry className="text-white text-xs sm:text-sm md:text-base" />
                 </div>
                 <div>
@@ -123,7 +123,7 @@ const Hero = () => {
               </div>
               <div className="w-px h-8 bg-white/20" />
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-yellow-400 to-orange-400 flex items-center justify-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-[#FFBB00] to-[#FF7518] flex items-center justify-center">
                   <FaBolt className="text-white text-xs sm:text-sm md:text-base" />
                 </div>
                 <div>
@@ -133,7 +133,7 @@ const Hero = () => {
               </div>
               <div className="w-px h-8 bg-white/20" />
               <div className="flex items-center gap-2">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-green-400 to-emerald-400 flex items-center justify-center">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-[#33E3EE] to-[#33E3EE] flex items-center justify-center">
                   <FaShieldAlt className="text-white text-xs sm:text-sm md:text-base" />
                 </div>
                 <div>

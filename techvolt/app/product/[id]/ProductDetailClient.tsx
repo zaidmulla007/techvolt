@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import Link from 'next/link';
+
 import { FaArrowLeft, FaCheckCircle, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -48,7 +48,7 @@ function ImageCarousel({ images, imageFolder, productName }: { images: string[];
           <button
             onClick={() => setPage((p) => Math.max(0, p - 1))}
             disabled={page === 0}
-            className="p-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white disabled:opacity-30 disabled:cursor-not-allowed hover:shadow-lg transition-all duration-300"
+            className="p-2 rounded-full bg-gradient-to-r from-[#16237D] to-[#33E3EE] text-white disabled:opacity-30 disabled:cursor-not-allowed hover:shadow-lg transition-all duration-300"
             aria-label="Previous images"
           >
             <FaChevronLeft size={14} />
@@ -58,7 +58,7 @@ function ImageCarousel({ images, imageFolder, productName }: { images: string[];
               <button
                 key={i}
                 onClick={() => setPage(i)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${i === page ? 'bg-blue-600 w-5' : 'bg-gray-300 hover:bg-gray-400'
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${i === page ? 'bg-[#1960A4] w-5' : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                 aria-label={`Go to page ${i + 1}`}
               />
@@ -67,7 +67,7 @@ function ImageCarousel({ images, imageFolder, productName }: { images: string[];
           <button
             onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
             disabled={page === totalPages - 1}
-            className="p-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white disabled:opacity-30 disabled:cursor-not-allowed hover:shadow-lg transition-all duration-300"
+            className="p-2 rounded-full bg-gradient-to-r from-[#16237D] to-[#33E3EE] text-white disabled:opacity-30 disabled:cursor-not-allowed hover:shadow-lg transition-all duration-300"
             aria-label="Next images"
           >
             <FaChevronRight size={14} />
@@ -532,9 +532,9 @@ export default function ProductDetailClient({ id }: { id: string }) {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Product Not Found</h1>
-          <Link href="/" className="text-blue-600 hover:text-blue-800">
+          <a href="/" className="text-[#1960A4] hover:text-[#16237D]">
             Return to Home
-          </Link>
+          </a>
         </div>
       </div>
     );
@@ -545,20 +545,20 @@ export default function ProductDetailClient({ id }: { id: string }) {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-12 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-600">
+      <section className="pt-32 pb-12 bg-gradient-to-br from-[#16237D] via-[#1960A4] to-[#33E3EE]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <Link
+            <a
               href="/"
               className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-6 transition-smooth"
             >
               <FaArrowLeft />
               <span>Back to Home</span>
-            </Link>
+            </a>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
               {productInfo.title}
             </h1>
@@ -594,7 +594,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
                   {/* Content Section */}
                   <div className="flex flex-col justify-center">
                     <div className="inline-block mb-4">
-                      <span className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-[#16237D] to-[#33E3EE] text-white px-4 py-1 rounded-full text-sm font-semibold">
                         {String(product.id).padStart(2, '0')}
                       </span>
                     </div>
@@ -604,7 +604,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
                     <p className="text-gray-600 leading-relaxed mb-6 text-justify">
                       {product.description}
                     </p>
-                    <div className="flex items-center gap-2 text-green-600">
+                    <div className="flex items-center gap-2 text-[#33E3EE]">
                       <FaCheckCircle />
                       <span className="font-semibold">Available for Supply</span>
                     </div>
@@ -630,7 +630,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
                 <span className="text-gradient">Certifications</span>
               </h2>
-              <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mx-auto mb-6 rounded-full" />
+              <div className="w-20 h-1 bg-gradient-to-r from-[#16237D] to-[#33E3EE] mx-auto mb-6 rounded-full" />
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our products meet international quality and safety standards
               </p>
@@ -645,7 +645,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ scale: 1.1, rotate: 2 }}
-                  className="flex items-center justify-center p-6 bg-gradient-to-br from-gray-50 to-blue-50 rounded-xl hover:shadow-lg transition-all duration-300"
+                  className="flex items-center justify-center p-6 bg-gradient-to-br from-gray-50 to-[#33E3EE]/10 rounded-xl hover:shadow-lg transition-all duration-300"
                 >
                   <div className="relative w-full h-24">
                     <Image
@@ -663,7 +663,7 @@ export default function ProductDetailClient({ id }: { id: string }) {
       )}
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-600">
+      <section className="py-16 bg-gradient-to-br from-[#16237D] via-[#1960A4] to-[#33E3EE]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -677,12 +677,12 @@ export default function ProductDetailClient({ id }: { id: string }) {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Contact our technical team for detailed specifications, datasheets, and customized solutions.
             </p>
-            <Link
+            <a
               href="/#contact"
-              className="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-smooth shadow-xl hover:shadow-2xl"
+              className="inline-block bg-white text-[#16237D] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-smooth shadow-xl hover:shadow-2xl"
             >
               Get in Touch
-            </Link>
+            </a>
           </motion.div>
         </div>
       </section>
