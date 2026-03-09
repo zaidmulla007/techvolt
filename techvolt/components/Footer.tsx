@@ -22,9 +22,9 @@ const Footer = () => {
             <Image
               src="/logo.png"
               alt="Power Electrical"
-              width={180}
-              height={60}
-              className="h-14 w-auto mb-4"
+              width={240}
+              height={80}
+              className="h-20 w-auto mb-4"
             />
             <p className="text-gray-600 text-sm mb-4">
               Specialist supplier of industrial and Oil & Gas electrical and lighting solutions for demanding environments.
@@ -113,6 +113,12 @@ const Footer = () => {
                 <FaPhone className="text-[#1960A4]" />
                 <a href="tel:+971545764342" className="text-gray-600 hover:text-[#1960A4] transition-smooth">
                   +971 54 576 4342
+                </a>
+              </li>
+              <li className="flex items-center gap-3 text-sm">
+                <FaPhone className="text-[#1960A4]" />
+                <a href="tel:+97167152700" className="text-gray-600 hover:text-[#1960A4] transition-smooth">
+                  +971 (0) 6 715 2700
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm">

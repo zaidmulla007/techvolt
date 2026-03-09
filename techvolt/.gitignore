@@ -42,3 +42,6 @@ next-env.d.ts
 
 # large files
 project-details/PowerElectricalsBrandBook.pdf
+
+# API config with credentials
+/public/api/config.php

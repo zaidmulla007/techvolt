@@ -262,7 +262,7 @@ const productData: any = {
     products: [
       {
         id: 1,
-        name: 'Explosion proof (EX) Socket & Plugs',
+        name: 'Explosion proof (Ex) Socket & Plugs',
         description: 'Explosion-proof electrical connectors and receptacles with optional integrated switching mechanisms are designed for hazardous environments. These devices meet variouse enclosure classification standards and adhere to both ATEX Directive and IECEx regulatory frameworks. They are suitable for use in hazardous location Zones 1 & 2 (flammable gases) and Zones 21 & 22 (combustible dust). This product line is complemented by a selection of supporting components, such as female receptacles, male connector inlets, mounting boxes, and transition sleeves, enabling flexible installation configurations.',
         images: [
           '1.a  Explosion proof (EX) Socket & Plugs.jpg',
@@ -391,7 +391,7 @@ const productData: any = {
     products: [
       {
         id: 1,
-        name: 'Explosion proof (EX) Flood Light',
+        name: 'Explosion proof (Ex) Flood Light',
         description: 'A compact, certified explosion proof (Ex) flood light providing high output LED illumination for hazardous locations. Available with ATEX/IECEx and UL/CSA options and rated for Zone 1/21, Zone 2/22 or Class I Div 1/2, it features corrosion resistant marine grade housing, impact rated lens, selectable lumen packages and color temperatures. Designed to deliver safe, low maintenance lighting to maximize operational safety, it is ideal for oil & gas refineries, tank farms, offshore rigs, LNG terminals, chemical plants and hazardous storage or loading areas.',
         images: [
           '1.a Ex FloodLight.jpg',
@@ -485,7 +485,7 @@ const productData: any = {
     products: [
       {
         id: 1,
-        name: 'Explosion proof (EX) Cabinet Air Conditioner',
+        name: 'Explosion proof (Ex) Cabinet Air Conditioner',
         description: 'Ex Signalling Devices are specialized alert systems engineered for safe operation in hazardous environments containing explosive gases and dust. These devices meet rigorous international safety standards including ATEX and IECEx certifications, ensuring compliance with global safety regulations. These devices are manufactured from robust materials such as stainless steel and fiberglass. They are widely deployed across critical sectors including petrochemical plants, oil & gas operations, and mining facilities where safety in explosive atmospheres is paramount.',
         images: ['1. Explosion proof (EX) Cabinet Air Conditioner.jpg'],
       },

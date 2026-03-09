@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
   const [ref, inView] = useInView({
@@ -20,11 +21,51 @@ const Contact = () => {
   });
 
   const [focusedField, setFocusedField] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
+    setIsSubmitting(true);
+
+    try {
+      const apiUrl = window.location.hostname === 'localhost'
+        ? 'http://localhost:8000/api/send-email.php'
+        : 'https://powerelectricaluae.com/api/send-email.php';
+
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.status === 'success') {
+        Swal.fire({
+          icon: 'success',
+          title: 'Thank You!',
+          text: 'Your message has been sent successfully. We will get back to you soon.',
+          confirmButtonColor: '#1960A4',
+        });
+        setFormData({ name: '', email: '', phone: '', company: '', message: '' });
+      } else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops!',
+          text: result.message || 'Something went wrong. Please try again.',
+          confirmButtonColor: '#1960A4',
+        });
+      }
+    } catch {
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops!',
+        text: 'Unable to send message. Please contact us directly.',
+        confirmButtonColor: '#1960A4',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -33,6 +74,13 @@ const Contact = () => {
       title: 'Phone',
       content: '+971 54 576 4342',
       link: 'tel:+971545764342',
+      color: '#16237D',
+    },
+    {
+      icon: FaPhone,
+      title: 'Phone',
+      content: '+971 (0) 6 715 2700',
+      link: 'tel:+97167152700',
       color: '#16237D',
     },
     {
@@ -255,12 +303,13 @@ const Contact = () => {
                 {/* Submit Button */}
                 <motion.button
                   type="submit"
-                  whileHover={{ scale: 1.02, boxShadow: '0 20px 40px rgba(25, 96, 164, 0.3)' }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full btn-primary py-4 text-lg flex items-center justify-center gap-3"
+                  disabled={isSubmitting}
+                  whileHover={isSubmitting ? {} : { scale: 1.02, boxShadow: '0 20px 40px rgba(25, 96, 164, 0.3)' }}
+                  whileTap={isSubmitting ? {} : { scale: 0.98 }}
+                  className={`w-full btn-primary py-4 text-lg flex items-center justify-center gap-3 ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
-                  <span>Send Message</span>
-                  <FaPaperPlane />
+                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                  {!isSubmitting && <FaPaperPlane />}
                 </motion.button>
               </form>
             </motion.div>

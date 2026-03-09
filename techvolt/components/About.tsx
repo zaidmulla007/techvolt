@@ -132,7 +132,7 @@ const About = () => {
                 Delivering the Right Products, at the Right Time, at the Right Cost
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Power Electrical Trading LLC is a specialist supplier offering high-performance products for demanding commercial, industrial, and hazardous environments. Our portfolio includes industrial lighting fixtures (including industrial highbay LED), Ex (explosion-proof) electrical products and lighting, EX junction boxes and control panels, EX air conditioning solutions, and a wide range of other industrial electrical components.
+                Power Electrical Trading LLC is a specialist supplier offering high-performance products for demanding commercial, industrial, and hazardous environments. Our portfolio includes industrial lighting fixtures Ex (explosion-proof) electrical products and lighting, Ex junction boxes and control panels, Ex air conditioning solutions, and a wide range of other industrial electrical components.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Our mission is to deliver the right products, at the right time, and at the right cost — minimizing risk for our customers and building long term relationships — by supplying robust, compliant, and energy efficient electrical and lighting solutions that maximize operational uptime, reduce lifecycle costs, and meet the strict safety and performance requirements of industrial environments.

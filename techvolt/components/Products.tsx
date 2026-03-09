@@ -40,7 +40,7 @@ const Products = () => {
       color: '#EC2300',
       hoverText: 'group-hover:text-[#EC2300]',
       hoverBorder: 'group-hover:border-[#EC2300]/20',
-      features: ['ATEX Certified', 'Zone 1 & 2', 'IECEx Approved', 'ICV Certified'],
+      features: ['ATEX Certified', 'Zone 1 & 2', 'IECEx Approved', 'ECAS Certificate'],
     },
     {
       id: 4,
@@ -60,7 +60,7 @@ const Products = () => {
       color: '#1960A4',
       hoverText: 'group-hover:text-[#1960A4]',
       hoverBorder: 'group-hover:border-[#1960A4]/20',
-      features: ['Climate Control', 'Positive Pressure', 'Ex Certified', 'ICV Certified'],
+      features: ['Climate Control', 'Positive Pressure', 'Atex Certified', 'IECEx Certified','Zone 1/2'],
     },
   ];
 
