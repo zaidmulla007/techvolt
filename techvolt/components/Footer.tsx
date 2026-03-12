@@ -30,15 +30,22 @@ const Footer = () => {
               Specialist supplier of industrial and Oil & Gas electrical and lighting solutions for demanding environments.
             </p>
             <div className="flex gap-4">
-              {[FaFacebook, FaTwitter, FaLinkedin, FaInstagram].map((Icon, index) => (
+              {[
+                { Icon: FaFacebook, href: '#' },
+                { Icon: FaTwitter, href: '#' },
+                { Icon: FaLinkedin, href: 'https://www.linkedin.com/company/powerelectrical/?viewAsMember=true' },
+                { Icon: FaInstagram, href: '#' },
+              ].map((item, index) => (
                 <motion.a
                   key={index}
-                  href="#"
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.2 }}
                   className="w-10 h-10 text-white rounded-full flex items-center justify-center transition-smooth"
                   style={{ background: 'linear-gradient(135deg, #1960A4, #33E3EE)' }}
                 >
-                  <Icon className="text-lg" />
+                  <item.Icon className="text-lg" />
                 </motion.a>
               ))}
             </div>
@@ -79,15 +86,15 @@ const Footer = () => {
             <h3 className="text-lg font-bold mb-4">Products</h3>
             <ul className="space-y-2">
               {[
-                'Industrial Electrical',
-                'Industrial Lighting',
-                'Ex Oil & Gas Electrical',
-                'Ex Oil & Gas Lighting',
-                'Ex Air Conditions'
+                { name: 'Industrial Electrical', href: '/product/1' },
+                { name: 'Industrial Lighting', href: '/product/2' },
+                { name: 'Ex Oil & Gas Electrical', href: '/product/3' },
+                { name: 'Ex Oil & Gas Lighting', href: '/product/4' },
+                { name: 'Ex Air Conditions', href: '/product/5' },
               ].map((item) => (
-                <li key={item}>
-                  <a href="#products" className="text-gray-600 hover:text-[#1960A4] transition-smooth text-sm">
-                    {item}
+                <li key={item.name}>
+                  <a href={item.href} className="text-gray-600 hover:text-[#1960A4] transition-smooth text-sm">
+                    {item.name}
                   </a>
                 </li>
               ))}
@@ -105,9 +112,14 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3 text-sm">
                 <FaMapMarkerAlt className="text-[#1960A4] mt-1 flex-shrink-0" />
-                <span className="text-gray-600">
+                <a
+                  href="https://www.google.com/maps/place/Power+Electrical+Trading+LLC/@25.345192,55.3924598,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f5b9882edcdc3:0xd13d2becab2c7039!8m2!3d25.345192!4d55.3924598!16s%2Fg%2F11y_fg2l00?hl=en-GB&entry=ttu&g_ep=EgoyMDI2MDMwOC4wIKXMDSoASAFQAw%3D%3D"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-[#1960A4] transition-smooth"
+                >
                   Office No. 502, Omran Tower, King Abdul Aziz Road, Al Nud, Al Qasimiya, Sharjah, UAE
-                </span>
+                </a>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <FaPhone className="text-[#1960A4]" />
